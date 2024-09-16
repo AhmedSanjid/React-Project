@@ -11,20 +11,24 @@ function AdminLayout({children}) {
   return (
   <>
   
-<Header/>
+
 <div id="app">
-    <main className="main">
+          <div id="main">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
+</div>
+    {/* <main className="main">
 
     <main>{children}</main>
 
     </main>
 
-    <Footer/>
+    <Footer/> */}
 
     {/* Scroll Top */}
     <a href="#" id="scroll-top" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
-
-</div>
   </>
   )
 }

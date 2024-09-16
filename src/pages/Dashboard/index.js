@@ -12,21 +12,11 @@ function Dashboard() {
   <div className="carousel-item active">
     <img src="assests/img/hero-carousel/hero-carousel-1.jpg" alt=""/>
     <div className="carousel-container">
-      <h2>Welcome to Crown </h2>
+      <h2>Welcome to Crown</h2>
       <p>"And O my people, give full measure and weight in justice and do not deprive the people of their due and do not commit abuse on the earth, spreading corruption" Surah:Hud-85 </p>
       <a href="#featured-services" className="btn-get-started">Get Started</a>
     </div>
   </div>{/* End Carousel Item */}
-
-  <a className="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-  </a>
-
-  <a className="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-    <span className="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-  </a>
-
-  <ol className="carousel-indicators"></ol>
 
 </div>
 
@@ -193,7 +183,7 @@ function Dashboard() {
 {/* Section Title */}
 <div className="container section-title" data-aos="fade-up">
   <h2>Logistics Solutions</h2>
-  <p>From the farm to your refrigerator, or the factory to your wardrobe, A.P. Moller - Maersk is developing solutions that meet customer needs from one end of the supply chain to the other.</p>
+  <p>We focus on solving your supply chain needs from end to end, taking the complexity out of container shipping. This is why we offer solutions addressing the entire product journey</p>
 </div>{/* End Section Title */}
 
 <div className="container">
@@ -262,7 +252,7 @@ function Dashboard() {
   <div className="row" data-aos="zoom-in" data-aos-delay="100">
     <div className="col-xl-9 text-center text-xl-start">
       <h3>Call To Action</h3>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Nature Avobe all, Be Sustainable with Crown Marine CORP.</p>
     </div>
     <div className="col-xl-3 cta-btn-container text-center">
       <a className="cta-btn align-middle" href="#">Call To Action</a>
@@ -279,7 +269,7 @@ function Dashboard() {
 {/* Section Title */}
 <div className="container section-title" data-aos="fade-up">
   <h2>Services</h2>
-  <p>We focus on solving your supply chain needs from end to end, taking the complexity out of container shipping. This is why we offer solutions addressing the entire product journey:</p>
+  <p>From the farm to your refrigerator, or the factory to your wardrobe, A.P. Moller - Maersk is developing solutions that meet customer needs from one end of the supply chain to the other.</p>
 </div>{/* End Section Title */}
 
 <div className="container">
@@ -505,8 +495,8 @@ function Dashboard() {
 
 {/* Section Title */}
 <div className="container section-title" data-aos="fade-up">
-  <h2>Contact</h2>
-  <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  <h2>Complaint Box</h2>
+  <p>The worst person to be around is the one who complains about everything and appreciates nothing; The Unhappy, Negative Soul who is quick to find fault with even the best of intentions.</p>
 </div>{/* End Section Title */}
 
 <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -520,7 +510,7 @@ function Dashboard() {
           <i className="bi bi-geo-alt flex-shrink-0"></i>
           <div>
             <h3>Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
+            <p>A.K khan Road, Akborhsha, Chittagong</p>
           </div>
         </div>{/* End Info Item */}
 
@@ -528,7 +518,7 @@ function Dashboard() {
           <i className="bi bi-telephone flex-shrink-0"></i>
           <div>
             <h3>Call Us</h3>
-            <p>+1 5589 55488 55</p>
+            <p>+8809696426844</p>
           </div>
         </div>{/* End Info Item */}
 
@@ -536,7 +526,7 @@ function Dashboard() {
           <i className="bi bi-envelope flex-shrink-0"></i>
           <div>
             <h3>Email Us</h3>
-            <p>info@example.com</p>
+            <p>crowncorp@yahoo.com</p>
           </div>
         </div>{/* End Info Item */}
 

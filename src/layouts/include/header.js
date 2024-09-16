@@ -1,6 +1,22 @@
 import React from 'react'
-
+import { useLocation, Link} from 'react-router-dom';
 function Header() {
+  const activeMenu = (e) => {
+    document.querySelectorAll('.submenu').forEach(
+        function (e) {
+            e.classList.remove('active');
+        }
+    )
+    const childElement = e.target.parentElement.querySelector('.submenu');
+    if (childElement && childElement.classList.contains('submenu')) {
+        childElement.classList.add('active');
+    }
+}
+
+const location = useLocation();
+const isLinkActive = (path) => {
+    return location.pathname == path ? 'active':"";
+  }
   return (
     <header id="header" className="header sticky-top">
 
@@ -25,7 +41,8 @@ function Header() {
         <a href="index.html" className="logo d-flex align-items-center">
           {/* Uncomment the line below if you also wish to use an image logo */}
           {/* <img src="assets/img/logo.png" alt=""> */}
-          <h1 className="sitename">CROWN</h1>
+          
+          <h1 className="sitename">CROWN MARINE CORP.</h1>
         </a>
     
         <nav id="navmenu" className="navmenu">
@@ -36,21 +53,32 @@ function Header() {
             <li><a href="#portfolio">Services</a></li>
             <li className="dropdown"><a href="index.html"><span>Book</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="index.html">Ocean Transport Container</a></li>
-                <li className="dropdown"><a href="index.html"><span>Industry sectors</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Container")}`}>
+                                        <Link to="/Container" className="sidebar-link">Ocean Transport Container</Link></li>
+                         <li className="dropdown"><a href="index.html"><span>Industry sectors</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
-                    <li><a href="index.html">FMCG</a></li>
-                    <li><a href="index.html">Retail</a></li>
-                    <li><a href="index.html">Fashion & Life Style</a></li>
-                    <li><a href="index.html">Chemical</a></li>
-                    <li><a href="index.html">Automotive</a></li>
-                    <li><a href="index.html">Pharma & Helthcare</a></li>
-                    <li><a href="index.html">Technology</a></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Fmcg")}`}>
+                  <Link to="/Fmcg" className="sidebar-link">FMCG</Link></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Retail")}`}>
+                  <Link to="/Retail" className="sidebar-link">Retail</Link></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Fashion")}`}>
+                  <Link to="/Fashion" className="sidebar-link">Fashion & Life Style</Link></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Chemical")}`}>
+                  <Link to="/Chemical" className="sidebar-link">Chemical</Link></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Auto")}`}>
+                  <Link to="/Auto" className="sidebar-link">Automotive</Link></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Care")}`}>
+                  <Link to="/Care" className="sidebar-link">Pharma & Helthcare</Link></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Tech")}`}>
+                  <Link to="/Tech" className="sidebar-link">Technology</Link></li>
                   </ul>
                 </li>
-                <li><a href="index.html">Less-than-Container Load (LCL)</a></li>
-                <li><a href="index.html">Air Freight</a></li>
-                <li><a href="index.html">Warehousing and Distribution</a></li>
+                <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Lcl")}`}>
+                  <Link to="/Lcl" className="sidebar-link">Less-than-Container Load (LCL)</Link></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Air")}`}>
+                  <Link to="/Air" className="sidebar-link">Air Freight</Link></li>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/House")}`}>
+                  <Link to="/House" className="sidebar-link">Warehousing and Distribution</Link></li>
               </ul>
             </li>
             <li><a href="#contact">Contact</a></li>
