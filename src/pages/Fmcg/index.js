@@ -5,33 +5,7 @@ function Fmcg() {
   return (
     <AdminLayout>
            
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div className="container">
-      <a className="navbar-brand" href="#">Crown Marine CORP. Logistics</a>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav ms-auto">
-          <li className="nav-item">
-            <a className="nav-link active" href="#">Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Facilities</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Pricing</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  
-  <header className="bg-primary text-white text-center py-5">
+  <header className="bg-success text-white text-center py-5">
     <div className="container">
       <h1>FMCG - Fast-Moving Consumer Goods</h1>
       <p className="lead">Efficient, Secure, and Fast Delivery Solutions for Your FMCG Needs</p>
@@ -175,18 +149,13 @@ function Fmcg() {
               <label for="cargo" className="form-label">Cargo Details</label>
               <textarea className="form-control" id="cargo" rows="3" placeholder="Describe your FMCG cargo"></textarea>
             </div>
-            <button type="submit" className="btn btn-primary w-100">Submit</button>
+            <button type="submit" className="btn btn-success w-100">Submit</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-
-  <footer className="bg-dark text-white text-center py-4">
-    <p>&copy; 2024 CROWN MARINE CORP. All Rights Reserved.</p>
-  </footer>
-  
     </AdminLayout>
   )
 }

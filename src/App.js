@@ -12,6 +12,8 @@ import Tech from './pages/Tech';
 import Lcl from './pages/Lcl';
 import Air from './pages/Air';
 import House from './pages/House';
+import Sailing from './pages/Sailing';
+import Track from './pages/Track';
 function App() {
   return (
 
@@ -29,6 +31,8 @@ function App() {
           <Route path="/Lcl" element={<Lcl />} />
           <Route path="/Air" element={<Air />} />
           <Route path="/House" element={<House />} />
+          <Route path="/Sailing" element={<Sailing />} />
+          <Route path="/Track" element={<Track />} />
         </Routes>
       </BrowserRouter>
 

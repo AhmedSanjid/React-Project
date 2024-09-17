@@ -96,12 +96,6 @@ function Chemical() {
       </div>
     </div>
   </section>
-
-  
-  <footer className="bg-dark text-white text-center py-4">
-    <p>&copy; 2024 CROWN MARINE CORP. All Rights Reserved.</p>
-  </footer>
-  
     </AdminLayout>
   )
 }

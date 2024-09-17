@@ -1,7 +1,24 @@
 import React from 'react';
 import AdminLayout from '../../layouts/AdminLayout';
+import { useLocation, Link} from 'react-router-dom';
 
 function Dashboard() {
+  const activeMenu = (e) => {
+    document.querySelectorAll('.submenu').forEach(
+        function (e) {
+            e.classList.remove('active');
+        }
+    )
+    const childElement = e.target.parentElement.querySelector('.submenu');
+    if (childElement && childElement.classList.contains('submenu')) {
+        childElement.classList.add('active');
+    }
+}
+
+const location = useLocation();
+const isLinkActive = (path) => {
+    return location.pathname == path ? 'active':"";
+  }
   return (
     <AdminLayout>
         {/* Hero Section */}
@@ -32,7 +49,8 @@ function Dashboard() {
     <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-activity icon"></i></div>
-        <h4><a href="" className="stretched-link">Sailing Schedules</a></h4>
+        <h4><li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Sailing")}`}>
+                  <Link to="/Sailing" className="sidebar-link">Sailing Schedule</Link></li></h4>
         <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
       </div>
     </div>{/* End Service Item */}
@@ -56,7 +74,8 @@ function Dashboard() {
     <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-broadcast icon"></i></div>
-        <h4><a href="" className="stretched-link">Cargo Traking</a></h4>
+        <h4><li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Track")}`}>
+                  <Link to="/Track" className="sidebar-link">Cargo Tracking</Link></li></h4>
         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
       </div>
     </div>{/* End Service Item */}

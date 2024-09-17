@@ -4,32 +4,6 @@ import AdminLayout from '../../layouts/AdminLayout';
 function Retail() {
   return (
     <AdminLayout>
-        
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Crown Marine CORP. Logistics</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Facilities</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Distribution</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   
   <header class="bg-success text-white text-center py-5">
     <div class="container">
@@ -175,17 +149,13 @@ function Retail() {
               <label for="cargo" class="form-label">Cargo Details</label>
               <textarea class="form-control" id="cargo" rows="3" placeholder="Describe your retail cargo"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <button type="submit" class="btn btn-success w-100">Submit</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  
-  <footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2024 CROWN MARINE CORP. All Rights Reserved.</p>
-  </footer>
   
     </AdminLayout>
   )
