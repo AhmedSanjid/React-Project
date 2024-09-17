@@ -14,6 +14,9 @@ import Air from './pages/Air';
 import House from './pages/House';
 import Sailing from './pages/Sailing';
 import Track from './pages/Track';
+import Freight1 from './pages/Freight1';
+import Freight2 from './pages/Freight2';
+import Freight3 from './pages/Freight3';
 function App() {
   return (
 
@@ -33,6 +36,9 @@ function App() {
           <Route path="/House" element={<House />} />
           <Route path="/Sailing" element={<Sailing />} />
           <Route path="/Track" element={<Track />} />
+          <Route path="/Freight1" element={<Freight1 />} />
+          <Route path="/Freight2" element={<Freight2 />} />
+          <Route path="/Freight3" element={<Freight3 />} />
         </Routes>
       </BrowserRouter>
 

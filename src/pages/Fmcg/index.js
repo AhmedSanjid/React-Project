@@ -28,7 +28,7 @@ function Fmcg() {
           </ul>
         </div>
         <div className="col-md-6">
-          <img src="https://via.placeholder.com/500x300" className="img-fluid" alt="FMCG Warehouse"/>
+          <img src="assests/img/portfolio/fmcg-1.png" className="img-fluid" alt="FMCG Warehouse"/>
         </div>
       </div>
     </div>
