@@ -27,9 +27,9 @@ const isLinkActive = (path) => {
 <div id="hero-carousel" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
   <div className="carousel-item active">
-    <img src="assests/img/hero-carousel/hero-carousel-1.jpg" alt=""/>
+    <img src="https://geodis.com/se/sites/default/files/styles/w1000xh500/public/2022-02/air-ocean_blog.jpg.webp?itok=O03kgRjE" alt=""/>
     <div className="carousel-container">
-      <h2>Welcome to Crown</h2>
+      <h2>Welcome to Diadem</h2>
       <p>"And O my people, give full measure and weight in justice and do not deprive the people of their due and do not commit abuse on the earth, spreading corruption" Surah:Hud-85 </p>
       <a href="#featured-services" className="btn-get-started">Get Started</a>
     </div>
@@ -100,13 +100,12 @@ const isLinkActive = (path) => {
   <div className="row gy-4">
     <div className="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
       <img src="assests/img/about.jpg" className="img-fluid" alt=""/>
-      <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" className="glightbox pulsating-play-btn"></a>
+      <a href="https://youtu.be/L6lVAMJzRGo?si=yY2YDo97flVRmIJ_" className="glightbox pulsating-play-btn"></a>
     </div>
     <div className="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
       <h3>True industry-leading customer experience isn’t a vision. It’s a passion. A passion for our customers whose business is dependent on moving the right products to the right market at the right time.</h3>
       <p className="fst-italic">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+      With the new East West network, our ambition is to deliver a flexible and well-connected ocean network that aims to provide unmatched and industry-leading reliability above 90 percent (as measured by SeaIntel) when the new network is fully phased in.
       </p>
       <ul>
         <li><i className="bi bi-check2-all"></i> <span>An intuitive platform to manage all your shipments and tasks in one place.</span></li>
@@ -274,7 +273,12 @@ const isLinkActive = (path) => {
       <p>Nature Avobe all, Be Sustainable with Crown Marine CORP.</p>
     </div>
     <div className="col-xl-3 cta-btn-container text-center">
-      <a className="cta-btn align-middle" href="#">Call To Action</a>
+    <a className="cta-btn align-middle" href="/Insurance">Insurance</a>
+
+<a onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Insurance")}`}>
+  <Link to="/Insurance" className="sidebar-link">Insurance</Link>
+</a>
+
     </div>
   </div>
 
@@ -296,14 +300,14 @@ const isLinkActive = (path) => {
   <div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
     <ul className="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-      <li data-filter="*" className="filter-active">Info</li>
+      <li data-filter="*" className="filter-active"><i>A House Of Freight Specialist!</i></li>
     </ul>{/* End Portfolio Filters */}
 
     <div className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/app-1.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/app-1.jpg" width="400px" height="100px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Container")}`}>
             <Link to="/Container" className="sidebar-link">Ocean Transport Container</Link></h4>
@@ -314,7 +318,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/product-1.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/product-1.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Auto")}`}>
             <Link to="/Auto" className="sidebar-link">Automotive</Link></h4>
@@ -325,7 +329,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/branding-1.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/branding-1.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Retail")}`}>
             <Link to="/Retail" className="sidebar-link">Retail</Link></h4>
@@ -336,7 +340,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/books-1.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/books-1.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Air")}`}>
             <Link to="/Air" className="sidebar-link">Air Freight</Link></h4>
@@ -347,17 +351,17 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/app-2.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/app-2.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 href="portfolio-details.html" title="More Details">Industry</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur</p>
+            <p>Regardless of your industry, your commodity, or your key markets, Maersk offers global and local logistics solutions that enable small and large businesses to grow.</p>
           </div>
         </div>
       </div>{/* End Portfolio Item */}
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/product-2.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/product-2.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Care")}`}>
             <Link to="/Care" className="sidebar-link">Pharma & Helthcare</Link></h4>
@@ -368,7 +372,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/branding-2.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/branding-2.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Fashion")}`}>
             <Link to="/Fashion" className="sidebar-link">Fashion & Life Style</Link></h4>
@@ -379,7 +383,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/books-2.jpg" className="img-fluid" alt=""/></a>
+          <a href="" data-gallery="portfolio-gallery-app" className="glightbox"><img src="https://ware2go.co/wp-content/uploads/2021/07/image-1200x800-1.jpeg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/House")}`}>
             <Link to="/House" className="sidebar-link">Warehousing and Distribution</Link></h4>
@@ -390,7 +394,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/app-3.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/app-3.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Lcl")}`}>
             <Link to="/Lcl" className="sidebar-link">Less-than-Container Load (LCL)</Link></h4>
@@ -401,7 +405,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/product-3.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/product-3.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Tech")}`}>
             <Link to="/Tech" className="sidebar-link">Technology</Link></h4>
@@ -412,7 +416,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/branding-3.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/branding-3.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Chemical")}`}>
             <Link to="/Chemical" className="sidebar-link">Chemical</Link></h4>
@@ -423,7 +427,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/books-3.jpg" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/books-3.jpg" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Fmcg")}`}>
             <Link to="/Fmcg" className="sidebar-link">FMCG</Link></h4>
@@ -455,7 +459,7 @@ const isLinkActive = (path) => {
 
     <div className="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
       <div className="member">
-        <img src="assests/img/team/team-1.jpg" className="img-fluid" alt=""/>
+        <img src="https://highwaymotor.com/wp-content/uploads/2020/05/1.jpg" className="img-fluid" alt=""/>
         <div className="member-content">
         <p onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Freight3")}`}>
         <Link to="/Freight3" className="sidebar-link"><h4>Highway Freight</h4></Link></p>
@@ -467,7 +471,7 @@ const isLinkActive = (path) => {
 
     <div className="col-lg-4 col-md-6 d-flex " data-aos="fade-up" data-aos-delay="200">
       <div className="member">
-        <img src="assests/img/team/team-2.jpg" className="img-fluid" alt=""/>
+        <img src="https://www.carseurope.net/wp-content/uploads/2015/06/car-sea-freight1.jpg" className="img-fluid" alt=""/>
         <div className="member-content">
         <p onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Freight2")}`}>
         <Link to="/Freight2" className="sidebar-link"><h4>Shipping Freight</h4></Link></p>
@@ -478,7 +482,7 @@ const isLinkActive = (path) => {
 
     <div className="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
       <div className="member">
-        <img src="assests/img/team/team-3.jpg" className="img-fluid" alt=""/>
+        <img src="https://www.maersk.com/~/media_sc9/maersk/solutions/transportation-services/air-freight/media-folder/air-freight-services_720x405_v3.jpg?h=405&w=720&hash=4F74EC323DD1457F5CE960D733C8B3DB" width="600px" className="img-fluid" alt=""/>
         <div className="member-content">
         <p onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Freight1")}`}>
         <Link to="/Freight1" className="sidebar-link"><h4>Air Freight</h4></Link></p>

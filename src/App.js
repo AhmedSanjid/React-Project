@@ -17,6 +17,7 @@ import Track from './pages/Track';
 import Freight1 from './pages/Freight1';
 import Freight2 from './pages/Freight2';
 import Freight3 from './pages/Freight3';
+import Insurance from './pages/Insurance';
 function App() {
   return (
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/Freight1" element={<Freight1 />} />
           <Route path="/Freight2" element={<Freight2 />} />
           <Route path="/Freight3" element={<Freight3 />} />
+          <Route path="/Insurance" element={<Insurance />} />
         </Routes>
       </BrowserRouter>
 

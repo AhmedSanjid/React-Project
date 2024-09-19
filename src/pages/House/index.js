@@ -39,30 +39,7 @@ function House() {
     <div class="container">
       <h2 class="text-center mb-4">Global Warehousing Locations</h2>
       <div id="map"></div>
-     {/* <script>
-        function initMap() {
-          var locations = [
-            { name: 'Los Angeles Warehouse', lat: 34.0522, lng: -118.2437 },
-            { name: 'Shanghai Distribution Center', lat: 31.2304, lng: 121.4737 },
-            { name: 'Rotterdam Logistics Hub', lat: 51.9225, lng: 4.47917 },
-            { name: 'Dubai Free Zone Warehouse', lat: 25.276987, lng: 55.296249 }
-          ];
-
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 2,
-            center: { lat: 20.0, lng: 0.0 }
-          });
-
-          locations.forEach(function(location) {
-            var marker = new google.maps.Marker({
-              position: { lat: location.lat, lng: location.lng },
-              map: map,
-              title: location.name
-            });
-          });
-        }
-        window.onload = initMap;
-      </script> */}
+      <img src="https://chinadivision.com/catalog/view/theme/chinadivision_web/image/home/global_warehousing.webp" width="1000px"></img>
     </div>
   </section>
 
