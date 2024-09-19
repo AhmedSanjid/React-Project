@@ -27,7 +27,7 @@ function Care() {
           </ul>
         </div>
         <div class="col-md-6">
-          <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Pharma & Healthcare Logistics"/>
+          <img src="https://ecommercefastlane.com/wp-content/uploads/2024/08/Smart-warehouse-management-system-using-augmented-reality-technology.jpeg" width="500px" class="img-fluid" alt="Pharma & Healthcare Logistics"/>
         </div>
       </div>
     </div>
@@ -40,14 +40,14 @@ function Care() {
       <div class="row">
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Loading" class="mb-3"/>
+            <img src="https://www.letmeship.com/wp-content/uploads/2024/01/Refrigerated-transport-loading-1024x683.jpg" width="200px" alt="Loading" class="mb-3"/>
             <h5>Loading and Handling</h5>
             <p>Pharma and healthcare products are loaded in temperature-controlled containers with real-time monitoring to ensure safe transit.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Global Distribution" class="mb-3"/>
+            <img src="https://media.licdn.com/dms/image/D4D12AQGz4GiRXwH3Tw/article-cover_image-shrink_600_2000/0/1662619082922?e=2147483647&v=beta&t=3WHuHQqd7CBSWxYc_Kd5fgiPsQFXPSUyOdPegH-Oa70" width="200px" alt="Global Distribution" class="mb-3"/>
             <h5>Global Distribution Network</h5>
             <p>We distribute to key markets, including:</p>
             <ul class="list-unstyled">
@@ -64,7 +64,7 @@ function Care() {
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Compliance" class="mb-3"/>
+            <img src="https://thumbs.dreamstime.com/z/dock-worker-carefully-loads-large-refrigerated-container-onto-ship-careful-not-to-damage-delicate-perishable-goods-inside-315169345.jpg" width="200px" alt="Compliance" class="mb-3"/>
             <h5>Compliance and Safety</h5>
             <p>Our logistics services comply with all international regulatory standards, ensuring that your healthcare products arrive safely and legally.</p>
           </div>

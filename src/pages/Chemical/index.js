@@ -27,7 +27,7 @@ function Chemical() {
           </ul>
         </div>
         <div className="col-md-6">
-          <img src="https://via.placeholder.com/500x300" className="img-fluid" alt="Chemical Logistics"/>
+          <img src="https://dfreight.org/wp-content/uploads/2023/08/An-Ultimate-Guide-to-Shipping-Chemicals-and-Plastics-DFreight.jpg" width="500px" className="img-fluid" alt="Chemical Logistics"/>
         </div>
       </div>
     </div>
@@ -40,14 +40,14 @@ function Chemical() {
       <div className="row">
         <div className="col-md-4">
           <div className="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Loading" className="mb-3"/>
+            <img src="https://www.emersonautomationexperts.com/wp-content/uploads/2023/09/complete-loading-unloading-solution.png" width="200px" alt="Loading" className="mb-3"/>
             <h5>Loading Methods</h5>
             <p>Our loading methods for chemical materials include the use of sealed, leak-proof containers and advanced handling equipment to ensure safe transport.</p>
           </div>
         </div>
         <div className="col-md-4">
           <div className="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Safe Locations" className="mb-3"/>
+            <img src="https://fastercapital.com/i/Safety-regulations--Ensuring-Compliance-in-Primary-Distribution--The-Future-of-Safety-Regulations-in-Primary-Distribution.webp" width="200px" alt="Safe Locations" className="mb-3"/>
             <h5>Distribution to Safe Locations</h5>
             <p>We distribute chemical materials to certified and secure locations worldwide, including:</p>
             <ul className="list-unstyled">
@@ -62,7 +62,7 @@ function Chemical() {
         </div>
         <div className="col-md-4">
           <div className="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Global Reach" className="mb-3"/>
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*zxAC5k8QjhqVw47KRgCnsA.jpeg" width="200px" alt="Global Reach" className="mb-3"/>
             <h5>Global Network</h5>
             <p>Our global network of safe distribution centers ensures that chemical materials reach their destinations safely and in compliance with all regulations.</p>
           </div>

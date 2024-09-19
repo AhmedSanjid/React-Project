@@ -28,7 +28,7 @@ function Tech() {
           <p>We utilize cutting-edge logistics technologies to streamline transportation from one country to another, ensuring timely and safe deliveries.</p>
         </div>
         <div class="col-md-6">
-          <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Technology Logistics"/>
+          <img src="https://miro.medium.com/v2/resize:fit:960/1*ui22ciOk4nHXM0CJG3lL3w.jpeg" class="img-fluid" alt="Technology Logistics"/>
         </div>
       </div>
     </div>
@@ -41,14 +41,14 @@ function Tech() {
       <div class="row">
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Loading" class="mb-3"/>
+            <img src="https://static.vecteezy.com/system/resources/previews/013/478/827/original/loading-pallets-box-forklift-isometric-warehouse-truck-cardboard-box-in-logistics-business-delivery-truck-isolate-vector.jpg" width="200px" alt="Loading" class="mb-3"/>
             <h5>Loading Methods</h5>
             <p>We use specialized equipment to load sensitive products, ensuring they are securely stowed and protected during transit.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Distribution" class="mb-3"/>
+            <img src="https://img.freepik.com/premium-vector/forklift-loading-pallet-boxes-into-truck_441769-68.jpg" width="200px" alt="Distribution" class="mb-3"/>
             <h5>Distribution Countries</h5>
             <p>We distribute technology products to major markets worldwide, including:</p>
             <ul class="list-unstyled">
@@ -65,7 +65,7 @@ function Tech() {
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Technologies Used" class="mb-3"/>
+            <img src="https://as2.ftcdn.net/v2/jpg/02/58/81/75/1000_F_258817506_q4dqSGdIxgErBtDMcriiD3VJskutnriU.jpg" width="200px" alt="Technologies Used" class="mb-3"/>
             <h5>Technologies Used in Logistics</h5>
             <p>We employ the latest technologies to enhance our logistics services:</p>
             <ul class="list-unstyled">

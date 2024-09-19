@@ -28,7 +28,7 @@ function Retail() {
           </ul>
         </div>
         <div class="col-md-6">
-          <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Retail Warehouse"/>
+          <img src="https://media.licdn.com/dms/image/D5612AQGt8PnxxoDrWA/article-cover_image-shrink_720_1280/0/1673846621210?e=2147483647&v=beta&t=n2min8PdcOIkktgLC3gi4ZsHSvp48jP9UazP-U4vDQg" width="500px" class="img-fluid" alt="Retail Warehouse"/>
         </div>
       </div>
     </div>
@@ -107,21 +107,21 @@ function Retail() {
       <div class="row">
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Standard Distribution" class="mb-3"/>
+            <img src="https://pub.mdpi-res.com/sustainability/sustainability-14-06529/article_deploy/html/images/sustainability-14-06529-g003.png?1653572350" width="100px" alt="Standard Distribution" class="mb-3"/>
             <h5>Standard Distribution</h5>
             <p>Ideal for general retail goods, standard distribution ensures your products reach their destination efficiently and securely via Less than Container Load (LCL) services.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Palletized Distribution" class="mb-3"/>
+            <img src="https://www.researchgate.net/profile/John-Aloysius/publication/346441489/figure/fig2/AS:969986923323396@1608274312553/Closed-loop-sustainable-retail-supply-chain-the-circular-economy_Q320.jpg" width="100px" alt="Palletized Distribution" class="mb-3"/>
             <h5>Palletized Distribution</h5>
             <p>Suitable for medium-to-large shipments, palletized distribution speeds up handling and minimizes product damage during transportation.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Custom Distribution" class="mb-3"/>
+            <img src="https://community.sap.com/legacyfs/online/storage/blog_attachments/2023/06/Circular-Economy-1.png" width="100px" alt="Custom Distribution" class="mb-3"/>
             <h5>Custom Distribution</h5>
             <p>For specialized retail goods, we offer custom distribution solutions tailored to meet specific delivery requirements, ensuring products are handled with the utmost care.</p>
           </div>

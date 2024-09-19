@@ -8,9 +8,11 @@ function Footer() {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <a href="index.html" className="logo d-flex align-items-center">
-              <span className="sitename">Green</span>
+              <span className="sitename">Crown Group of Companies</span>
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <p>Increasing complexity in global supply chains is making them inefficient, vulnerable and unsustainable. At Maersk, our strategic vision is to become the Global Integrator, offering truly integrated logistics solutions that connect, protect and simplify our customers’ supply chains.
+
+Learn more about how we are accelerating a fundamental transition in global logistics.</p>
             <div className="social-links d-flex mt-4">
               <a href="index.html"><i className="bi bi-twitter-x"></i></a>
               <a href="index.html"><i className="bi bi-facebook"></i></a>
@@ -20,7 +22,7 @@ function Footer() {
           </div>
 
           <div className="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Who we are</h4>
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="index.html">About us</a></li>
@@ -54,14 +56,7 @@ function Footer() {
       </div>
 
       <div className="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong className="px-1 sitename">Green</strong> <span>All Rights Reserved</span></p>
-        <div className="credits">
-          {/* All the links in the footer should remain intact. */}
-          {/* You can delete the links only if you've purchased the pro version. */}
-          {/* Licensing information: https://bootstrapmade.com/license/ */}
-          {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] */}
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+        <p>2024 © <span>copyright</span> <strong className="px-1 sitename">Crown</strong> <span>All Rights Reserved</span></p>
       </div>
 
     </footer>

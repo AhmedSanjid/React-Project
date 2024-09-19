@@ -20,7 +20,7 @@ function Air() {
       <div class="row">
         <div class="col-md-6">
           <div class="card h-100">
-            <img src="https://via.placeholder.com/500x250" class="card-img-top" alt="Full Container Load"/>
+            <img src="https://www.agi.global/wp-content/uploads/2024/04/Air-Freight-101.png" width="250px" class="card-img-top" alt="Full Container Load"/>
             <div class="card-body">
               <h5 class="card-title">Full Container Load (FCL)</h5>
               <p class="card-text">With FCL, you book the entire container for your shipment, ensuring minimal handling and reduced transit time. Perfect for large cargo loads.</p>
@@ -29,7 +29,7 @@ function Air() {
         </div>
         <div class="col-md-6">
           <div class="card h-100">
-            <img src="https://via.placeholder.com/500x250" class="card-img-top" alt="Less than Container Load"/>
+            <img src="https://www.maersk.com/~/media_sc9/maersk/news/press-releases/images/2024/02/12/maersk-airfreight_1024x576.jpg?w=877&hash=70D6CBFD46A0D598660AFB0B64B6F07D" width="250px" class="card-img-top" alt="Less than Container Load"/>
             <div class="card-body">
               <h5 class="card-title">Less than Container Load (LCL)</h5>
               <p class="card-text">For smaller shipments, LCL allows you to share container space with other cargo, making it a cost-effective solution without the need for a full container.</p>

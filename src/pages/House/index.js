@@ -28,7 +28,7 @@ function House() {
           </ul>
         </div>
         <div class="col-md-6">
-          <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Warehouse Image"/>
+          <img src="https://dfreight.org/wp-content/uploads/2022/09/Warehouse-Management-System-DFreight.jpg" width="500px" class="img-fluid" alt="Warehouse Image"/>
         </div>
       </div>
     </div>
@@ -73,21 +73,21 @@ function House() {
       <div class="row">
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Last Mile" class="mb-3"/>
+            <img src="https://media.licdn.com/dms/image/D4E12AQF4TY9jYfyKnA/article-cover_image-shrink_600_2000/0/1679829287335?e=2147483647&v=beta&t=C0fgkLnr0BpPwIjGej3SSdp1zwSf7quGNfe2ygzu4MM" width="200px" alt="Last Mile" class="mb-3"/>
             <h5>Last Mile Delivery</h5>
             <p>Fast and reliable last mile delivery services to ensure your cargo reaches its final destination in time.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Global Network" class="mb-3"/>
+            <img src="https://img-cdn.inc.com/image/upload/w_1024,h_576,c_fill/images/panoramic/getty_1169660398_c3xndp.jpg" width="200px" alt="Global Network" class="mb-3"/>
             <h5>Global Network</h5>
             <p>Our global distribution network covers all major shipping routes, enabling smooth and hassle-free transportation across continents.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Custom Solutions" class="mb-3"/>
+            <img src="https://customsolutions.info/assets/images/logo/logo.png" width="150px" alt="Custom Solutions" class="mb-3"/>
             <h5>Custom Solutions</h5>
             <p>We offer tailor-made logistics and distribution solutions based on your cargo needs, ensuring maximum efficiency and cost savings.</p>
           </div>

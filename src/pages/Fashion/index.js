@@ -27,7 +27,7 @@ function Fashion() {
           </ul>
         </div>
         <div class="col-md-6">
-          <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Fashion and Lifestyle Logistics"/>
+          <img src="https://excelenciaempauta.com.br/wp-content/uploads/2016/02/http-blog.1worldsync.comeuenable-empower-supply-chain.jpg" width="500px" class="img-fluid" alt="Fashion and Lifestyle Logistics"/>
         </div>
       </div>
     </div>
@@ -40,14 +40,14 @@ function Fashion() {
       <div class="row">
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Loading" class="mb-3"/>
+            <img src="https://techpacker.com/blog/content/images/2024/04/Ultimate-guide-to-supply-chain-management--3-.png" width="200px" alt="Loading" class="mb-3"/>
             <h5>Loading Methods</h5>
             <p>Our loading methods include specialized racks for hanging garments, secure packaging for luxury items, and climate-controlled containers to maintain product quality.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Distribution" class="mb-3"/>
+            <img src="https://www.chicagobooth.edu/-/media/project/chicago-booth/chicago-booth-review/2022/february/chicago-booth-supply-chain.jpg?cx=0.22&cy=0.23&cw=1880&ch=783&hash=ABF664CC98FFA590C7C45501FE576571" width="200px" alt="Distribution" class="mb-3"/>
             <h5>Distribution Countries</h5>
             <p>We distribute to key fashion and lifestyle markets including:</p>
             <ul class="list-unstyled">
@@ -64,7 +64,7 @@ function Fashion() {
         </div>
         <div class="col-md-4">
           <div class="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Global Reach" class="mb-3"/>
+            <img src="https://www.salesforce.com/ca/blog/wp-content/uploads/sites/12/2023/10/supply-chains-101-header.png" width="200px" alt="Global Reach" class="mb-3"/>
             <h5>Global Reach</h5>
             <p>With a network of trusted partners and facilities, we ensure that your fashion and lifestyle products reach their destinations efficiently, regardless of distance.</p>
           </div>

@@ -28,7 +28,7 @@ function Fmcg() {
           </ul>
         </div>
         <div className="col-md-6">
-          <img src="assests/img/portfolio/fmcg-1.png" className="img-fluid" alt="FMCG Warehouse"/>
+          <img src="https://miro.medium.com/v2/resize:fit:1400/0*oBIuRgIr1n7ox8lS" width="500px" className="img-fluid" alt="FMCG Warehouse"/>
         </div>
       </div>
     </div>
@@ -107,21 +107,21 @@ function Fmcg() {
       <div className="row">
         <div className="col-md-4">
           <div className="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Standard Loading" className="mb-3"/>
+            <img src="https://cdn-trans.info/uploads/2019/07/8f57951d5f61f23999949a487ed.jpg" width="200px" alt="Standard Loading" className="mb-3"/>
             <h5>Standard Loading</h5>
             <p>For general FMCG goods, standard loading ensures quick and efficient packing with optimal container utilization.</p>
           </div>
         </div>
         <div className="col-md-4">
           <div className="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Palletized Loading" className="mb-3"/>
+            <img src="https://www.transportify.com.ph/wp-content/uploads/sites/5/2020/11/supply-chain-solutions-fmcg-company-delivery-app-og-1.jpg" width="200px" alt="Palletized Loading" className="mb-3"/>
             <h5>Palletized Loading</h5>
             <p>Ideal for large FMCG loads, palletized loading ensures fast handling, proper stacking, and increased cargo protection.</p>
           </div>
         </div>
         <div className="col-md-4">
           <div className="icon-box text-center">
-            <img src="https://via.placeholder.com/100" alt="Temperature-Controlled Loading" className="mb-3"/>
+            <img src="https://www.logisticsmiddleeast.com/2021/07/GAC-Contract-Logistics-MEA18.jpg" width="200px" alt="Temperature-Controlled Loading" className="mb-3"/>
             <h5>Temperature-Controlled Loading</h5>
             <p>For perishable FMCG items, temperature-controlled loading ensures your goods are kept at the right temperature throughout the journey.</p>
           </div>
