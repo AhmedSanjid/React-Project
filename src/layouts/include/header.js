@@ -38,12 +38,12 @@ const isLinkActive = (path) => {
     <div className="branding d-flex align-items-cente">
     
       <div className="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" className="logo d-flex align-items-center">
+      <Link to="/" className="logo d-flex align-items-center">
           {/* Uncomment the line below if you also wish to use an image logo */}
           {/* <img src="assets/img/logo.png" alt=""> */}
           
           <h1 className="sitename">CROWN MARINE CORP.</h1>
-        </a>
+          </Link>
     
         <nav id="navmenu" className="navmenu">
           <ul>
