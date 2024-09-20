@@ -51,7 +51,7 @@ const isLinkActive = (path) => {
         <div className="icon"><i className="bi bi-activity icon"></i></div>
         <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Sailing")}`}>
                   <Link to="/Sailing" className="sidebar-link">Sailing Schedule</Link></h4>
-        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+        <p>As markets change constantly, you need a logistical solution that is reliable and mitigates uncertainty without compromising on your convenience.</p>
       </div>
     </div>{/* End Service Item */}
 
@@ -59,7 +59,7 @@ const isLinkActive = (path) => {
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-bounding-box-circles icon"></i></div>
         <h4><a href="" className="stretched-link">More Services</a></h4>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+        <p>Receive emissions reporting and optimisation insights across all carriers and modes.</p>
       </div>
     </div>{/* End Service Item */}
 
@@ -67,7 +67,7 @@ const isLinkActive = (path) => {
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-calendar4-week icon"></i></div>
         <h4><a href="" className="stretched-link">All-in-One</a></h4>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+        <p>Global logistics at your fingertips.</p>
       </div>
     </div>{/* End Service Item */}
 
@@ -76,7 +76,7 @@ const isLinkActive = (path) => {
         <div className="icon"><i className="bi bi-broadcast icon"></i></div>
         <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Track")}`}>
                   <Link to="/Track" className="sidebar-link">Cargo Tracking</Link></h4>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+        <p>Streamline your B2B data transfers to make faster and more informed decisions.</p>
       </div>
     </div>{/* End Service Item */}
 
@@ -155,14 +155,14 @@ const isLinkActive = (path) => {
 
     <div className="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
       <span>05</span>
-      <h4>Sapiente Magnam</h4>
-      <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+      <h4>Supply Chain Services</h4>
+      <p>Maersk provides a range of integrated supply chain and logistics products designed to meet the needs of all types of businesses. Contact us today and learn how we can help you adapt to the ever-changing demands of global supply chains.</p>
     </div>{/* End Card Item */}
 
     <div className="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="600">
       <span>06</span>
-      <h4>Facilis Impedit</h4>
-      <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
+      <h4>E-Commerce Logistics</h4>
+      <p>Optimise your end-to-end e-commerce logistics, with order fulfilment, last-mile&nbsp;and cross-border delivery.</p>
     </div>{/* End Card Item */}
 
   </div>
@@ -179,14 +179,7 @@ const isLinkActive = (path) => {
   <div className="swiper init-swiper">
 
     <div className="swiper-wrapper align-items-center">
-      <div className="swiper-slide"><img src="assests/img/clients/client-1.png" className="img-fluid" alt=""/></div>
-      <div className="swiper-slide"><img src="assests/img/clients/client-2.png" className="img-fluid" alt=""/></div>
-      <div className="swiper-slide"><img src="assests/img/clients/client-3.png" className="img-fluid" alt=""/></div>
-      <div className="swiper-slide"><img src="assests/img/clients/client-4.png" className="img-fluid" alt=""/></div>
-      <div className="swiper-slide"><img src="assests/img/clients/client-5.png" className="img-fluid" alt=""/></div>
-      <div className="swiper-slide"><img src="assests/img/clients/client-6.png" className="img-fluid" alt=""/></div>
-      <div className="swiper-slide"><img src="assests/img/clients/client-7.png" className="img-fluid" alt=""/></div>
-      <div className="swiper-slide"><img src="assests/img/clients/client-8.png" className="img-fluid" alt=""/></div>
+      
     </div>
     <div className="swiper-pagination"></div>
   </div>
@@ -265,24 +258,20 @@ const isLinkActive = (path) => {
 {/* Call To Action Section */}
 <section id="call-to-action" className="call-to-action section accent-background">
 
-<div className="container">
+  <div className="container">
 
-  <div className="row" data-aos="zoom-in" data-aos-delay="100">
-    <div className="col-xl-9 text-center text-xl-start">
-      <h3>Call To Action</h3>
-      <p>Nature Avobe all, Be Sustainable with Crown Marine CORP.</p>
-    </div>
-    <div className="col-xl-3 cta-btn-container text-center">
-    <a className="cta-btn align-middle" href="/Insurance">Insurance</a>
-
-<a onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Insurance")}`}>
-  <Link to="/Insurance" className="sidebar-link">Insurance</Link>
-</a>
-
+    <div className="row" data-aos="zoom-in" data-aos-delay="100">
+      <div className="col-xl-9 text-center text-xl-start">
+        <h3>Call To Action</h3>
+        <p>Nature Avobe all, Be Sustainable with Diadem Marine CORP.</p>
+      </div>
+      <div className="col-xl-3 cta-btn-container text-center">
+        <a className="cta-btn align-middle" href="/Insurance">Insurance</a>
+          <a onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Insurance")}`}>
+            <Link to="/Insurance" className="sidebar-link"></Link></a>
+      </div>
     </div>
   </div>
-
-</div>
 
 </section>{/* /Call To Action Section */}
 
