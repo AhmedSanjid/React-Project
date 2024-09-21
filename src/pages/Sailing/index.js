@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../layouts/AdminLayout';
+import { useState } from 'react';
 
 function Sailing() {
   const [searchTerm, setSearchTerm] = useState('');

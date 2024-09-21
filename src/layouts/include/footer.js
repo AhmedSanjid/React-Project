@@ -9,6 +9,7 @@ function Footer() {
           <div className="col-lg-5 col-md-12 footer-about">
             <a href="index.html" className="logo d-flex align-items-center">
               <span className="sitename">Diadem Group of Companies</span>
+              <span className="sitename">Diadem Group of Companies</span>
             </a>
             <p>Increasing complexity in global supply chains is making them inefficient, vulnerable and unsustainable. At Maersk, our strategic vision is to become the Global Integrator, offering truly integrated logistics solutions that connect, protect and simplify our customers’ supply chains.
 

@@ -27,7 +27,7 @@ function Fashion() {
           </ul>
         </div>
         <div class="col-md-6">
-          <img src="https://excelenciaempauta.com.br/wp-content/uploads/2016/02/http-blog.1worldsync.comeuenable-empower-supply-chain.jpg" width="500px" class="img-fluid" alt="Fashion and Lifestyle Logistics"/>
+          <img src="https://img.freepik.com/premium-photo/modern-clothing-store-with-neon-lights-cyber-monday-generated-by-ai_664580-604.jpg" width="400px" />
         </div>
       </div>
     </div>

@@ -361,7 +361,7 @@ const isLinkActive = (path) => {
 
       <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
         <div className="portfolio-content h-100">
-          <a href="assests/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="assests/img/portfolio/branding-2.jpg" width="400px" className="img-fluid" alt=""/></a>
+          <a href="assests/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" className="glightbox"><img src="https://img.freepik.com/premium-photo/modern-clothing-store-with-neon-lights-cyber-monday-generated-by-ai_664580-606.jpg?w=360" width="400px" className="img-fluid" alt=""/></a>
           <div className="portfolio-info">
             <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Fashion")}`}>
             <Link to="/Fashion" className="sidebar-link">Fashion & Life Style</Link></h4>
