@@ -42,7 +42,7 @@ const isLinkActive = (path) => {
           {/* Uncomment the line below if you also wish to use an image logo */}
           {/* <img src="assets/img/logo.png" alt=""> */}
           
-          <h1 className="sitename">CROWN MARINE CORP.</h1>
+          <h1 className="sitename">DIADEM LOGISTICS LTD.</h1>
           </Link>
     
         <nav id="navmenu" className="navmenu">
@@ -53,9 +53,9 @@ const isLinkActive = (path) => {
             <li><a href="#portfolio">Services</a></li>
             <li className="dropdown"><a href="index.html"><span>Book</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-              <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Container")}`}>
-                                        <Link to="/Container" className="sidebar-link">Ocean Transport Container</Link></li>
-                         <li className="dropdown"><a href="index.html"><span>Industry sectors</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Container")}`}>
+                  <Link to="/Container" className="sidebar-link">Ocean Transport Container</Link></li>
+                <li className="dropdown"><a href="index.html"><span>Industry sectors</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                   <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Fmcg")}`}>
                   <Link to="/Fmcg" className="sidebar-link">FMCG</Link></li>
@@ -81,7 +81,7 @@ const isLinkActive = (path) => {
                   <Link to="/House" className="sidebar-link">Warehousing and Distribution</Link></li>
               </ul>
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Box</a></li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

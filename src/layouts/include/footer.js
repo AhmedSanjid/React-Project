@@ -8,7 +8,7 @@ function Footer() {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <a href="index.html" className="logo d-flex align-items-center">
-              <span className="sitename">Crown Group of Companies</span>
+              <span className="sitename">Diadem Group of Companies</span>
             </a>
             <p>Increasing complexity in global supply chains is making them inefficient, vulnerable and unsustainable. At Maersk, our strategic vision is to become the Global Integrator, offering truly integrated logistics solutions that connect, protect and simplify our customers’ supply chains.
 
@@ -45,11 +45,11 @@ Learn more about how we are accelerating a fundamental transition in global logi
 
           <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p>United States</p>
-            <p className="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>A.K Khan Road</p>
+            <p>Akborsha</p>
+            <p>Chittagong</p>
+            <p className="mt-4"><strong>Phone:</strong> <span>+8809696426844</span></p>
+            <p><strong>Email:</strong> <span>crowncorp@yahoo.com</span></p>
           </div>
 
         </div>

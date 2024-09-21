@@ -20,7 +20,7 @@ function Container() {
       <div className="row">
         <div className="col-md-4">
           <div className="card h-100">
-            <img src="https://lh3.googleusercontent.com/proxy/1btsrJ60I-vZHHCDeL3eHnNR-NktTVbQ8SmAhC_BDav4KwHHpExSyQHJ5HcjxohFyufEN4aZC0kg9FjznDcJlj4PqdKOXahyjtUJ1DtNw4kM_e5C1NDuOA" width="200px" height="250px" className="card-img-top" alt="Container Shipping"/>
+            <img src="https://www.one-line.com/sites/g/files/lnzjqr776/files/inline-images/bg.jpg" width="200px" height="250px" className="card-img-top" alt="Container Shipping"/>
             <div className="card-body">
               <h5 className="card-title">Container Shipping</h5>
               <p className="card-text">We provide containerized shipping solutions to ensure your goods are transported safely across the world, using our vast fleet of ocean vessels.</p>
@@ -29,7 +29,7 @@ function Container() {
         </div>
         <div className="col-md-4">
           <div className="card h-100">
-            <img src="https://cdn-ddjkn.nitrocdn.com/zoOAxMoiZxgXlNFUkdYczxXLKKgayzmB/assets/images/optimized/rev-08e236d/wp-content/uploads/2021/02/goods-transport-services.jpg" width="200px" height="250px" className="card-img-top" alt="Bulk Cargo"/>
+            <img src="https://image.cnbcfm.com/api/v1/image/107149511-1668071326472-gettyimages-997042320-148347209.jpeg?v=1668140224" width="200px" height="250px" className="card-img-top" alt="Bulk Cargo"/>
             <div className="card-body">
               <h5 className="card-title">Bulk Cargo Shipping</h5>
               <p className="card-text">Our specialized bulk shipping services handle large quantities of goods like raw materials and bulk liquids, ensuring efficient transport and handling.</p>
@@ -38,7 +38,7 @@ function Container() {
         </div>
         <div className="col-md-4">
           <div className="card h-100">
-            <img src="https://www.arconcontainer.com/wp-content/uploads/2024/06/Arcon_Blog_1_image-01-1.jpg" width="250px" height="250px" className="card-img-top" alt="Refrigerated Shipping"/>
+            <img src="https://containerwest.com/wp-content/uploads/2022/06/refrigerated-container7.jpg" width="250px" height="250px" className="card-img-top" alt="Refrigerated Shipping"/>
             <div className="card-body">
               <h5 className="card-title">Refrigerated Shipping</h5>
               <p className="card-text">Transport perishable goods with our state-of-the-art refrigerated containers, maintaining product integrity from origin to destination.</p>
