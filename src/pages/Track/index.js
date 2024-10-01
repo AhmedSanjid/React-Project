@@ -62,7 +62,7 @@ const [serialNumber, setSerialNumber] = useState('');
        <h2 className="text-center mb-4">Container Location</h2>
          <div className="table-responsive">
             <table className="table table-bordered table-striped">
-     <thead className="table-dark">
+     <thead className="table-sucssess">
                 <tr>
         <th>Serial Number</th>
                   <th>Location Name</th>

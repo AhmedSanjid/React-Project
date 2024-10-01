@@ -3,11 +3,11 @@ import AdminLayout from '../../layouts/AdminLayout';
 
 const scheduleData = {
   sailing: [
-    { id: 'Pacific', country: 'USA', depPort: 'Los Angeles', depDate: '2024-09-18', arrPort: 'Yokohama', arrDate: '2024-10-05', time: '17 Days' },
-    { id: 'Atlantic Voyager', country: 'USA', depPort: 'New York', depDate: '2024-09-21', arrPort: 'Rotterdam', arrDate: '2024-10-04', time: '13 Days' },
-    { id: 'TIARA123', country: 'Bangladesh', depPort: 'Mongla', depDate: '2024-09-25', arrPort: 'Tokyo Harbor', arrDate: '2024-10-06', time: '15 Days' },
-    { id: 'Ruler Ship', country: 'Germany', depPort: 'Rohetdam', depDate: '2024-09-18', arrPort: 'port Busan', arrDate: '2024-10-07', time: '14 Days' },
-    { id: 'Barbadose', country: 'USA', depPort: 'New York', depDate: '2024-09-21', arrPort: 'Rotterdam', arrDate: '2024-10-04', time: '13 Days' },
+{ id: 'Pacific', country: 'USA', depPort: 'Los Angeles', depDate: '2024-09-18', arrPort: 'Yokohama', arrDate: '2024-10-05', time: '17 Days' },
+  { id: 'Atlantic Voyager', country: 'USA', depPort: 'New York', depDate: '2024-09-21', arrPort: 'Rotterdam', arrDate: '2024-10-04', time: '13 Days' },
+{ id: 'TIARA123', country: 'Bangladesh', depPort: 'Mongla', depDate: '2024-09-25', arrPort: 'Tokyo Harbor', arrDate: '2024-10-06', time: '15 Days' },
+  { id: 'Ruler Ship', country: 'Germany', depPort: 'Rohetdam', depDate: '2024-09-18', arrPort: 'port Busan', arrDate: '2024-10-07', time: '14 Days' },
+  { id: 'Barbadose', country: 'USA', depPort: 'New York', depDate: '2024-09-21', arrPort: 'Rotterdam', arrDate: '2024-10-04', time: '13 Days' },
     { id: 'Black Flag', country: 'Bangladesh', depPort: 'Chittagong', depDate: '2024-09-28', arrPort: 'Port of Kobe', arrDate: '2024-10-01', time: '11 Days' },
   ],
   airfreight: [
