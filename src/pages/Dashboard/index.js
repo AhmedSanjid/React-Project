@@ -58,7 +58,8 @@ const isLinkActive = (path) => {
     <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-bounding-box-circles icon"></i></div>
-        <h4><a href="" className="stretched-link">More Services</a></h4>
+        <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Login")}`}>
+                  <Link to="/Login" className="sidebar-link">Connect to Diadem</Link></h4>
         <p>Receive emissions reporting and optimisation insights across all carriers and modes.</p>
       </div>
     </div>{/* End Service Item */}
@@ -66,7 +67,7 @@ const isLinkActive = (path) => {
     <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-calendar4-week icon"></i></div>
-        <h4><a href="https://www.maersk.com/newpaths/#discover-what-truly-integrated-logistics-is-all-about" className="stretched-link">All-in-One</a></h4>
+        <h4><a href="https://www.maersk.com/newpaths/#discover-what-truly-integrated-logistics-is-all-about" className="stretched-link">Who we are!</a></h4>
         <p>Global logistics at your fingertips.</p>
       </div>
     </div>{/* End Service Item */}

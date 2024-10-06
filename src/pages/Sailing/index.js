@@ -3,34 +3,33 @@ import AdminLayout from '../../layouts/AdminLayout';
 
 const scheduleData = {
   sailing: [
-{ id: 'Pacific', country: 'USA', depPort: 'Los Angeles', depDate: '2024-09-18', arrPort: 'Yokohama', arrDate: '2024-10-05', time: '17 Days' },
-  { id: 'Atlantic Voyager', country: 'USA', depPort: 'New York', depDate: '2024-09-21', arrPort: 'Rotterdam', arrDate: '2024-10-04', time: '13 Days' },
-{ id: 'TIARA123', country: 'Bangladesh', depPort: 'Mongla', depDate: '2024-09-25', arrPort: 'Tokyo Harbor', arrDate: '2024-10-06', time: '15 Days' },
-  { id: 'Ruler Ship', country: 'Germany', depPort: 'Rohetdam', depDate: '2024-09-18', arrPort: 'port Busan', arrDate: '2024-10-07', time: '14 Days' },
-  { id: 'Barbadose', country: 'USA', depPort: 'New York', depDate: '2024-09-21', arrPort: 'Rotterdam', arrDate: '2024-10-04', time: '13 Days' },
-    { id: 'Black Flag', country: 'Bangladesh', depPort: 'Chittagong', depDate: '2024-09-28', arrPort: 'Port of Kobe', arrDate: '2024-10-01', time: '11 Days' },
+
+    { id: 'Pacific Asia', country: 'Bangladesh', depPort: 'Chittagong', depDate: '2024-10-05', arrPort: 'Singapore', arrDate: '2024-10-10', time: '5 Days' },
+    { id: 'Asia Pearl', country: 'Bangladesh', depPort: 'Chittagong', depDate: '2024-10-12', arrPort: 'Colombo', arrDate: '2024-10-16', time: '4 Days' },
+    { id: 'Ganges Voyager', country: 'India', depPort: 'Kolkata', depDate: '2024-10-14', arrPort: 'Chittagong', arrDate: '2024-10-18', time: '4 Days' },
+    { id: 'Bay King', country: 'Bangladesh', depPort: 'Dhaka', depDate: '2024-10-20', arrPort: 'Penang', arrDate: '2024-10-24', time: '4 Days' },
+    { id: 'Tiger Express', country: 'India', depPort: 'Mumbai', depDate: '2024-11-01', arrPort: 'Chittagong', arrDate: '2024-11-06', time: '5 Days' },
+    { id: 'Jade Wave', country: 'China', depPort: 'Shanghai', depDate: '2024-11-10', arrPort: 'Chittagong', arrDate: '2024-11-15', time: '5 Days' },
   ],
   airfreight: [
- { id: 'AA789', country: 'USA', depAirport: 'JFK, New York', depDate: '2024-09-22', arrAirport: 'Heathrow, London', arrDate: '2024-09-22', time: '7 Hours' },
-    { id: 'ABC456', country: 'Germany', depAirport: 'FRA, Frankfurt', depDate: '2024-09-29', arrAirport: 'LAX, Los Angeles', arrDate: '2024-09-30', time: '12 Hours' },
- { id: 'BB123', country: 'USA', depAirport: 'JFK, New York', depDate: '2024-09-22', arrAirport: 'Heathrow, London', arrDate: '2024-09-22', time: '9 Hours' },
-{ id: 'DEF789', country: 'Scotland', depAirport: 'Glasgow airport', depDate: '2024-09-25', arrAirport: 'ZIA airport', arrDate: '2024-09-26', time: '18 Hours' },
-    { id: 'CC456', country: 'Belgium', depAirport: 'Brussels Airport', depDate: '2024-09-28', arrAirport: 'Oslo airport', arrDate: '2024-09-29', time: '14 Hours' },
- { id: 'ABC789', country: 'Norway', depAirport: 'Oslo Airport', depDate: '2024-09-29', arrAirport: 'Haneda Airport', arrDate: '2024-09-30', time: '10 Hours' },
- { id: 'DD007', country: 'Bangladesh', depAirport: 'Zia Airport', depDate: '2024-09-25', arrAirport: 'Fukuoka Airport', arrDate: '2024-09-22', time: '9 Hours' },
-    { id: 'ABC007', country: 'Bangladsh', depAirport: 'Osmani international Airport', depDate: '2024-09-28', arrAirport: 'LAX, Los Angeles', arrDate: '2024-09-29', time: '12 Hours' },
+    { id: 'BG789', country: 'Bangladesh', depAirport: 'Shahjalal International Airport, Dhaka', depDate: '2024-10-05', arrAirport: 'Singapore Changi Airport', arrDate: '2024-10-05', time: '4 Hours' },
+    { id: 'CX456', country: 'Hong Kong', depAirport: 'Hong Kong International Airport', depDate: '2024-10-10', arrAirport: 'Shahjalal International Airport, Dhaka', arrDate: '2024-10-10', time: '5 Hours' },
+    { id: 'AI789', country: 'India', depAirport: 'Indira Gandhi International Airport, Delhi', depDate: '2024-10-15', arrAirport: 'Osmani International Airport, Sylhet', arrDate: '2024-10-15', time: '3 Hours' },
+    { id: 'SG123', country: 'Singapore', depAirport: 'Changi Airport', depDate: '2024-10-18', arrAirport: 'Hazrat Shahjalal International Airport, Dhaka', arrDate: '2024-10-18', time: '4 Hours' },
+    { id: 'BG456', country: 'Bangladesh', depAirport: 'Shah Amanat International Airport, Chittagong', depDate: '2024-10-22', arrAirport: 'Dubai International Airport', arrDate: '2024-10-22', time: '5 Hours' },
+    { id: 'TK789', country: 'Turkey', depAirport: 'Istanbul Airport', depDate: '2024-10-25', arrAirport: 'Hazrat Shahjalal International Airport, Dhaka', arrDate: '2024-10-25', time: '7 Hours' },
   ],
   highway: [
-    { id: 'TRK123', country: 'Bangladesh', depCity: 'Chittagong', depDate: '2024-09-20', arrCity: 'Dellhi', arrDate: '2024-09-21', time: '1 Day' },
- { id: 'TRK789', country: 'pakistan', depCity: 'korachi', depDate: '2024-09-25', arrCity: 'Xinjiang', arrDate: '2024-09-28', time: '3 Days' },
-    { id: 'TRK456', country: 'Nepal', depCity: 'Pokhara', depDate: '2024-09-28', arrCity: 'Chittagong', arrDate: '2024-10-4', time: '7 Day' },
- { id: 'TRK012', country: 'Bhutan', depCity: 'Paro', depDate: '2024-09-22', arrCity: 'Pokhara', arrDate: '2024-09-25', time: '3 Days' },
-  { id: 'TRK013', country: 'Bangladesh', depCity: 'Chittagong', depDate: '2024-09-28', arrCity: 'Paro', arrDate: '2024-09-30', time: '3 Day' },
-    { id: 'TRK014', country: 'pakistan', depCity: 'korachi', depDate: '2024-09-29', arrCity: 'Dhaka', arrDate: '2024-09-30', time: '2 Days' },
-  { id: 'TRK015', country: 'Mayanmar', depCity: 'Yangon', depDate: '2024-09-20', arrCity: 'Mumbai', arrDate: '2024-09-21', time: '1 Day' },
-  { id: 'TRK016', country: 'India', depCity: 'Haydrabad', depDate: '2024-09-25', arrCity: 'Korachi', arrDate: '2024-09-27', time: '2 Days' },
+    { id: 'TRK123', country: 'Bangladesh', depCity: 'Chittagong', depDate: '2024-10-08', arrCity: 'Dhaka', arrDate: '2024-10-09', time: '1 Day' },
+    { id: 'TRK789', country: 'India', depCity: 'Kolkata', depDate: '2024-10-12', arrCity: 'Dhaka', arrDate: '2024-10-14', time: '2 Days' },
+    { id: 'TRK456', country: 'Bangladesh', depCity: 'Dhaka', depDate: '2024-10-15', arrCity: 'Sylhet', arrDate: '2024-10-15', time: '1 Day' },
+    { id: 'TRK012', country: 'India', depCity: 'Guwahati', depDate: '2024-10-18', arrCity: 'Chittagong', arrDate: '2024-10-20', time: '2 Days' },
+    { id: 'TRK013', country: 'Bangladesh', depCity: 'Chittagong', depDate: '2024-10-22', arrCity: 'Cox’s Bazar', arrDate: '2024-10-23', time: '1 Day' },
+    { id: 'TRK014', country: 'Bangladesh', depCity: 'Dhaka', depDate: '2024-11-05', arrCity: 'Rajshahi', arrDate: '2024-11-06', time: '1 Day' },
+    { id: 'TRK015', country: 'Myanmar', depCity: 'Yangon', depDate: '2024-11-10', arrCity: 'Chittagong', arrDate: '2024-11-12', time: '2 Days' },
   ],
 };
+    
 
 function Sailing() {
  const [date, setDate] = useState('');

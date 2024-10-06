@@ -22,6 +22,9 @@ import Airfreight from './pages/Airfreight';
 import Sailingfreight from './pages/Sailingfreight';
 import Highwayfreight from './pages/Highwayfreight';
 import Warehouse from './pages/Warehouse';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+
 function App() {
   return (
 
@@ -49,6 +52,8 @@ function App() {
           <Route path="/Sailingfreight" element={<Sailingfreight />} />
           <Route path="/Highwayfreight" element={<Highwayfreight />} />
           <Route path="/Warehouse" element={<Warehouse />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
 

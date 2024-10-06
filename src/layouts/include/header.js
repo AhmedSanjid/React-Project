@@ -51,7 +51,7 @@ const isLinkActive = (path) => {
             <li><a href="#about">About</a></li>
             <li><a href="#services">Logistics Solutions</a></li>
             <li><a href="#portfolio">Services</a></li>
-            <li className="dropdown"><a href="index.html"><span>Book your order</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li className="dropdown"><a href="index.html"><span>Book your Freight</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Highwayfreight")}`}>
                   <Link to="/Highwayfreight" className="sidebar-link">Highway Freight</Link></li>
@@ -60,7 +60,7 @@ const isLinkActive = (path) => {
                   <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/airfreight")}`}>
                   <Link to="/airfreight" className="sidebar-link">Air Freight</Link></li>
                   <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Warehouse")}`}>
-                  <Link to="/Warehouse" className="sidebar-link">Warehousing and Distribution</Link></li>
+                  <Link to="/Warehouse" className="sidebar-link">Warehouse</Link></li>
               </ul>
             </li>
             <li><a href="#contact">Box</a></li>
