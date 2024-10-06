@@ -18,6 +18,10 @@ import Freight1 from './pages/Freight1';
 import Freight2 from './pages/Freight2';
 import Freight3 from './pages/Freight3';
 import Insurance from './pages/Insurance';
+import Airfreight from './pages/Airfreight';
+import Sailingfreight from './pages/Sailingfreight';
+import Highwayfreight from './pages/Highwayfreight';
+import Warehouse from './pages/Warehouse';
 function App() {
   return (
 
@@ -41,6 +45,10 @@ function App() {
           <Route path="/Freight2" element={<Freight2 />} />
           <Route path="/Freight3" element={<Freight3 />} />
           <Route path="/Insurance" element={<Insurance />} />
+          <Route path="/Airfreight" element={<Airfreight />} />
+          <Route path="/Sailingfreight" element={<Sailingfreight />} />
+          <Route path="/Highwayfreight" element={<Highwayfreight />} />
+          <Route path="/Warehouse" element={<Warehouse />} />
         </Routes>
       </BrowserRouter>
 

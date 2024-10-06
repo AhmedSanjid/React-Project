@@ -66,7 +66,7 @@ const isLinkActive = (path) => {
     <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-calendar4-week icon"></i></div>
-        <h4><a href="" className="stretched-link">All-in-One</a></h4>
+        <h4><a href="https://www.maersk.com/newpaths/#discover-what-truly-integrated-logistics-is-all-about" className="stretched-link">All-in-One</a></h4>
         <p>Global logistics at your fingertips.</p>
       </div>
     </div>{/* End Service Item */}
