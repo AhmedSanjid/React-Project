@@ -24,6 +24,7 @@ import Highwayfreight from './pages/Highwayfreight';
 import Warehouse from './pages/Warehouse';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Forget from './pages/Forget';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="/Warehouse" element={<Warehouse />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/Forget" element={<Forget />} />
         </Routes>
       </BrowserRouter>
 
