@@ -17,7 +17,7 @@ function Airfreight() {
                     <textarea class="form-control" id="productDetails" rows="2" placeholder="Enter product details"></textarea>
                 </div>
                 <div class="col-md-6">
-                    <label for="planeName" class="form-label">Plane Name</label>
+                    <label for="planeName" class="form-label">Flight number</label>
                     <input type="text" class="form-control" id="planeName" placeholder="Enter plane name"/>
                 </div>
             </div>
@@ -65,7 +65,7 @@ function Airfreight() {
                     <input type="number" class="form-control" id="productWeight" placeholder="Enter product weight"/>
                 </div>
                 <div class="col-md-6">
-                    <label for="containerSerial" class="form-label">Container Serial Number</label>
+                    <label for="containerSerial" class="form-label">Cargo Serial Number</label>
                     <input type="text" class="form-control" id="containerSerial" placeholder="Enter container serial number"/>
                 </div>
             </div>

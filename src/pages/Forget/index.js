@@ -4,7 +4,6 @@ import AdminLayout from '../../layouts/AdminLayout';
 function Forget() {
   return (
     <AdminLayout>
-<body class="bg-light"/>
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card p-4 shadow-sm">
