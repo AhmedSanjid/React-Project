@@ -48,7 +48,8 @@ const isLinkActive = (path) => {
 
                     
                     <div class="text-center">
-                        <a href="#">Need any support?</a>
+                    <p onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Forget")}`}>
+                    <Link to="/Forget" className="sidebar-link">Need any support?</Link></p>
                     </div><br></br>
                     <div class="text-center">
                     <p onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Signup")}`}> haven't any pass?
