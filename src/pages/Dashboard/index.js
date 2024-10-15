@@ -173,21 +173,23 @@ const isLinkActive = (path) => {
 </section>{/* /Why Us Section */}
 
 {/* Clients Section */}
-<section id="clients" className="clients section light-background">
-
-<div className="container" data-aos="fade-up" data-aos-delay="100">
-
-  <div className="swiper init-swiper">
-
-    <div className="swiper-wrapper align-items-center">
-      
+<section id="call-to-action" className="call-to-action section accent-background">
+  <div className="container">
+    <div className="row" data-aos="zoom-in" data-aos-delay="100">
+      <div className="col-12 text-center">
+        <h3>Notify your Status</h3>
+        <p>Please let us know about your Scenarios </p>
+      </div>
+      <div className="col-12 d-flex justify-content-between align-items-center">
+      <a onClick={activeMenu} className={`cta-btn align-middle btn-vendors sidebar-item ${isLinkActive("/Stafss")}`}>
+      <Link to="/Staffs" className="sidebar-link">Staffs</Link> </a>
+        <a onClick={activeMenu} className={`cta-btn align-middle btn-vendors sidebar-item ${isLinkActive("/Vendors")}`}>
+          <Link to="/Vendors" className="sidebar-link">Vendors</Link>
+        </a>
+      </div>
     </div>
-    <div className="swiper-pagination"></div>
   </div>
-
-</div>
-
-</section>{/* /Clients Section */}
+</section>
 
 {/* Services Section */}
 <section id="services" className="services section">
