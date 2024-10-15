@@ -25,6 +25,8 @@ import Warehouse from './pages/Warehouse';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Forget from './pages/Forget';
+import Staff from './pages/Staff';
+import Vendors from './pages/Vendors';
 
 function App() {
   return (
@@ -56,6 +58,8 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Forget" element={<Forget />} />
+          <Route path="/Staff" element={<Staff />} />
+          <Route path="/Vendors" element={<Vendors />} />
         </Routes>
       </BrowserRouter>
 

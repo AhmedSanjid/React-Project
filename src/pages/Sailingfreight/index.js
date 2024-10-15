@@ -8,33 +8,33 @@ function Sailingfreight() {
     <div class="container mt-5 mb-5 ">
         
         <h1 class="text-center mb-4">Sailing Freight Booking</h1>
-            <div class="row mb-3">
+        <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="productDetails" class="form-label">Product Details</label>
-                    <textarea class="form-control" id="productDetails" rows="2" placeholder="Enter product details"/>
+                    <label for="name" class="form-label">Name</label>
+                    <input type class="form-control" id="name" placeholder="Name"/>
                 </div>
                 <div class="col-md-6">
-                    <label for="shipName" class="form-label">Ship Name</label>
-                    <input type="text" class="form-control" id="shipName" placeholder="Enter ship name"/>
+                    <label for="companyname" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="companyname" placeholder="Company Name"/>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="departurePort" class="form-label">Departure Port</label>
-                    <input type="text" class="form-control" id="departurePort" placeholder="Enter departure port name"/>
+                    <label for="shipname" class="form-label">Ship Name</label>
+                    <input type="text" class="form-control" id="shipname" placeholder="Ship Name"/>
                 </div>
                 <div class="col-md-6">
-                    <label for="arrivalLocation" class="form-label">Arrival Location</label>
-                    <input type="text" class="form-control" id="arrivalLocation" placeholder="Enter arrival location"/>
+                    <label for="arrivalport" class="form-label">Arrival Port</label>
+                    <input type="text" class="form-control" id="arrivalport" placeholder="Port Name"/>
                 </div>
             </div>
 
             
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="invoiceNumber" class="form-label">Invoice Number</label>
-                    <input type="text" class="form-control" id="invoiceNumber" placeholder="Enter invoice number"/>
+                    <label for="insurancenumber" class="form-label">Insurance Number</label>
+                    <input type="text" class="form-control" id="insurancenumber" placeholder="Number"/>
                 </div>
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email</label>

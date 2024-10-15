@@ -175,14 +175,14 @@ const isLinkActive = (path) => {
 {/* Clients Section */}
 <section id="call-to-action" className="call-to-action section accent-background">
   <div className="container">
-    <div className="row" data-aos="zoom-in" data-aos-delay="100">
+    <div className="row">
       <div className="col-12 text-center">
         <h3>Notify your Status</h3>
         <p>Please let us know about your Scenarios </p>
       </div>
       <div className="col-12 d-flex justify-content-between align-items-center">
-      <a onClick={activeMenu} className={`cta-btn align-middle btn-vendors sidebar-item ${isLinkActive("/Stafss")}`}>
-      <Link to="/Staffs" className="sidebar-link">Staffs</Link> </a>
+      <a onClick={activeMenu} className={`cta-btn align-middle btn-vendors sidebar-item ${isLinkActive("/Staff")}`}>
+      <Link to="/Staff" className="sidebar-link">Staffs</Link> </a>
         <a onClick={activeMenu} className={`cta-btn align-middle btn-vendors sidebar-item ${isLinkActive("/Vendors")}`}>
           <Link to="/Vendors" className="sidebar-link">Vendors</Link>
         </a>

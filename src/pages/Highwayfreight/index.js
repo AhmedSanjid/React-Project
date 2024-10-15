@@ -8,41 +8,38 @@ function Highwayfreight() {
         
         <h1 class="text-center mb-4">Highway Freight Booking</h1>
 
-        
-    
-            
-            <div class="row mb-3">
+        <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="productDetails" class="form-label">Product Details</label>
-                    <textarea class="form-control" id="productDetails" rows="2" placeholder="Enter product details"></textarea>
+                    <label for="name" class="form-label">Name</label>
+                    <input type class="form-control" id="name" placeholder="Name"/>
                 </div>
                 <div class="col-md-6">
-                    <label for="vehicleName" class="form-label">Vehicle Name</label>
-                    <input type="text" class="form-control" id="vehicleName" placeholder="Enter vehicle name"/>
+                    <label for="companyname" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="companyname" placeholder="Company Name"/>
                 </div>
             </div>
 
             
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="departureLocation" class="form-label">Departure Location</label>
-                    <input type="text" class="form-control" id="departureLocation" placeholder="Enter departure location"/>
+                    <label for="vehicleid" class="form-label">vehicle ID</label>
+                    <input type="text" class="form-control" id="vehicleid" placeholder="ID"/>
                 </div>
                 <div class="col-md-6">
-                    <label for="arrivalLocation" class="form-label">Arrival Location</label>
-                    <input type="text" class="form-control" id="arrivalLocation" placeholder="Enter arrival location"/>
+                    <label for="departurelocation" class="form-label">Departure Location</label>
+                    <input type="text" class="form-control" id="departurelocation" placeholder="Location"/>
                 </div>
             </div>
 
             
             <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="arrivallocation" class="form-label">Arrival Location</label>
+                    <input type="text" class="form-control" id="arrivallocation" placeholder="Location"/>
+                </div>
                 <div class="col-md-6">
                     <label for="insuranceNumber" class="form-label">Insurance Number</label>
                     <input type="text" class="form-control" id="insuranceNumber" placeholder="Enter insurance number"/>
-                </div>
-                <div class="col-md-6">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email"/>
                 </div>
             </div>
 
@@ -65,8 +62,8 @@ function Highwayfreight() {
                     <input type="number" class="form-control" id="productWeight" placeholder="Enter product weight"/>
                 </div>
                 <div class="col-md-6">
-                    <label for="vehicleSerial" class="form-label">Vehicle Serial Number</label>
-                    <input type="text" class="form-control" id="vehicleSerial" placeholder="Enter vehicle serial number"/>
+                    <label for="pricePerTon" class="form-label">Price per Ton</label>
+                    <input type="number" class="form-control" id="pricePerTon" placeholder="Enter price per ton"/>
                 </div>
             </div>
 

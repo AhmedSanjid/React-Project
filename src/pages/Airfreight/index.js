@@ -13,20 +13,20 @@ function Airfreight() {
             
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="productDetails" class="form-label">Product Details</label>
-                    <textarea class="form-control" id="productDetails" rows="2" placeholder="Enter product details"></textarea>
+                    <label for="name" class="form-label">Name</label>
+                    <input type class="form-control" id="name" placeholder="Name"/>
                 </div>
                 <div class="col-md-6">
-                    <label for="planeName" class="form-label">Flight number</label>
-                    <input type="text" class="form-control" id="planeName" placeholder="Enter plane name"/>
+                    <label for="companyname" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="companyname" placeholder="Company Name"/>
                 </div>
             </div>
 
             
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="departureAirport" class="form-label">Departure Airport</label>
-                    <input type="text" class="form-control" id="departureAirport" placeholder="Enter departure airport name"/>
+                    <label for="flightnumber" class="form-label">Flight Number</label>
+                    <input type="text" class="form-control" id="flightnumber" placeholder="Number"/>
                 </div>
                 <div class="col-md-6">
                     <label for="arrivalAirport" class="form-label">Arrival Airport</label>
