@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 function Airfreight() {
-    const [inputs, setInputs] = useState({ id: '', name: '', company_name: '', flight_number: '', arrival_airport_name: '', insurance_number: '',});
+    const [inputs, setInputs] = useState({ id: '', name: '', company_name: '', flight_number: '', arrival_airport_name: '', insurance_number: ''});
     const navigate = useNavigate();
     const { id } = useParams();
   

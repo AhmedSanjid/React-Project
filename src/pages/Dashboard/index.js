@@ -50,7 +50,7 @@ const isLinkActive = (path) => {
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-activity icon"></i></div>
         <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Sailing")}`}>
-                  <Link to="/Sailing" className="sidebar-link">Sailing Schedule</Link></h4>
+                  <Link to="/Sailing" className="sidebar-link">Schedules</Link></h4>
         <p>As markets change constantly, you need a logistical solution that is reliable and mitigates uncertainty without compromising on your convenience.</p>
       </div>
     </div>{/* End Service Item */}

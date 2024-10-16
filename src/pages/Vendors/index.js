@@ -4,7 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 function Vendors() {
-  const [inputs, setInputs] = useState({ id: '', name: '', location: '', title: '', vehicle: '', contact_number: '', email: '', photo: '',});
+  const [inputs, setInputs] = useState({ id: '', name: '', location: '', title: '', vehicle: '', contact_number: '', email: '', photo: ''});
   const navigate = useNavigate();
   const { id } = useParams();
 

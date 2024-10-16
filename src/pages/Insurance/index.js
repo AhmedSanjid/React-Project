@@ -116,7 +116,7 @@ function Insurance() {
 
             
             <div class="mb-3">
-              <label for="company" class="form-label">Company Name</label>
+              <label for="company_name" class="form-label">Company Name</label>
               <input defaultValue={inputs.company_name} name="company_name" onChange={handleChange} type="text" id="company_name" className="form-control" required />
             </div>
 

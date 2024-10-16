@@ -1,52 +1,102 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AdminLayout from '../../layouts/AdminLayout';
+import { useNavigate, Link } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import axios from 'axios';
 
 function Sailingfreight() {
+    const [inputs, setInputs] = useState({ id: '', name: '', company_name: '', ship_name: '', arrival_port_name: '', insurance_number: '',});
+    const navigate = useNavigate();
+    const { id } = useParams();
+  
+    function getDatas() {
+        axios.get(`${process.env.REACT_APP_API_URL}/sailingfreight/${id}`).then(function (response) {
+            setInputs(response.data.data);
+        });
+    }
+  
+    useEffect(() => {
+        if (id) {
+            getDatas();
+        }
+    }, []);
+  
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({ ...values, [name]: value }));
+    }
+  
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(inputs)
+  
+        try {
+            let apiurl = '';
+            if (inputs.id != '') {
+                apiurl =`/sailingfreight/edit/${inputs.id}`;
+            } else {
+                apiurl =`/sailingfreight/create`;
+            }
+  
+            let response = await axios({
+                method: 'post',
+                responsiveType: 'json',
+                url: `${process.env.REACT_APP_API_URL}${apiurl}`,
+                data: inputs
+            });
+            navigate('/sailingfreight')
+        }
+        catch (e) {
+            console.log(e);
+          }
+        }
   return (
     <AdminLayout>
     
     <div class="container mt-5 mb-5 ">
         
         <h1 class="text-center mb-4">Sailing Freight Booking</h1>
-        <div class="row mb-3">
+        <form onSubmit={handleSubmit}>
+            <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="name" class="form-label">Name</label>
-                    <input type class="form-control" id="name" placeholder="Name"/>
+                    <input defaultValue={inputs.name} name="name" onChange={handleChange} type="text" id="name" className="form-control" required />
                 </div>
                 <div class="col-md-6">
-                    <label for="companyname" class="form-label">Company Name</label>
-                    <input type="text" class="form-control" id="companyname" placeholder="Company Name"/>
+                    <label for="company_name" class="form-label">Company Name</label>
+                    <input defaultValue={inputs.company_name} name="company_name" onChange={handleChange} type="text" id="company_name" className="form-control" required />
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="shipname" class="form-label">Ship Name</label>
-                    <input type="text" class="form-control" id="shipname" placeholder="Ship Name"/>
+                    <label for="ship_name" class="form-label">Ship Name</label>
+                    <input defaultValue={inputs.ship_name} name="ship_name" onChange={handleChange} type="text" id="ship_name" className="form-control" required />
                 </div>
                 <div class="col-md-6">
-                    <label for="arrivalport" class="form-label">Arrival Port</label>
-                    <input type="text" class="form-control" id="arrivalport" placeholder="Port Name"/>
+                    <label for="arrival_port_name" class="form-label">Arrival Port</label>
+                    <input defaultValue={inputs.arrival_port_name} name="arrival_port_name" onChange={handleChange} type="text" id="arrival_port_name" className="form-control" required />
                 </div>
             </div>
 
             
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="insurancenumber" class="form-label">Insurance Number</label>
-                    <input type="text" class="form-control" id="insurancenumber" placeholder="Number"/>
+                    <label for="insurance_number" class="form-label">Insurance Number</label>
+                    <input defaultValue={inputs.insurance_number} name="insurance_number" onChange={handleChange} type="text" id="insurance_number" className="form-control" required />
                 </div>
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email"/>
+                    <input type="text" class="form-control" id="email" placeholder="Enter email"/>
                 </div>
             </div>
 
             
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="price" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="price" placeholder="Enter price"/>
+                    <label for="category" class="form-label">category</label>
+                    <input defaultValue={inputs.category} name="category" onChange={handleChange} type="text" id="category" className="form-control" required />
                 </div>
                 <div class="col-md-6">
                     <label for="totalAmount" class="form-label">Total Amount</label>
@@ -57,12 +107,12 @@ function Sailingfreight() {
             
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="productWeight" class="form-label">Product Weight (kg)</label>
-                    <input type="number" class="form-control" id="productWeight" placeholder="Enter product weight"/>
+                    <label for="product_details" class="form-label">Product Details</label>
+                    <input defaultValue={inputs.product_details} name="product_details" onChange={handleChange} type="text" id="product_details" className="form-control" required />
                 </div>
                 <div class="col-md-6">
-                    <label for="containerSerial" class="form-label">Container Serial Number</label>
-                    <input type="text" class="form-control" id="containerSerial" placeholder="Enter container serial number"/>
+                    <label for="invoice_number" class="form-label">Invoice Number</label>
+                    <input defaultValue={inputs.invoice_number} name="invoice_number" onChange={handleChange} type="text" id="invoice_number" className="form-control" required />
                 </div>
             </div>
 
@@ -87,6 +137,7 @@ function Sailingfreight() {
                     <button type="button" class="btn btn-secondary w-100">Edit</button>
                 </div>
             </div>
+            </form>
         </div>
     </AdminLayout>
   );

@@ -4,12 +4,12 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 function Staff() {
-  const [inputs, setInputs] = useState({ id: '', name: '', location: '', title: '', vehicle: '', contact_number: '', email: '', photo: '',});
+  const [inputs, setInputs] = useState({ id: '', name: '', location: '', title: '', vehicle: '', contact_number: '', email: '', photo: ''});
     const navigate = useNavigate();
     const { id } = useParams();
 
     function getDatas() {
-        axios.get(`${process.env.REACT_APP_API_URL}/staffs/${id}`).then(function (response) {
+        axios.get(`${process.env.REACT_APP_API_URL}/staff/${id}`).then(function (response) {
             setInputs(response.data.data);
         });
     }
@@ -33,9 +33,9 @@ function Staff() {
         try {
             let apiurl = '';
             if (inputs.id != '') {
-                apiurl =`/staffs/edit/${inputs.id}`;
+                apiurl =`/staff/edit/${inputs.id}`;
             } else {
-                apiurl =`/staffs/create`;
+                apiurl =`/staff/create`;
             }
 
             let response = await axios({
@@ -44,7 +44,7 @@ function Staff() {
                 url: `${process.env.REACT_APP_API_URL}${apiurl}`,
                 data: inputs
             });
-            navigate('/staffs')
+            navigate('/staff')
         }
         catch (e) {
             console.log(e);
@@ -54,18 +54,18 @@ function Staff() {
     <AdminLayout>
   <body>
 <div class="container mt-5 mb-5" >
-  <form> 
+  <form onSubmit={handleSubmit}> 
     <div class="mb-3">
-      <label for="staffName" class="form-label">Name</label>
-      <input type="text" class="form-control" name="name" onSubmit={handleSubmit} id="staffname" placeholder="Enter your name" required/>
+      <label for="name" class="form-label">Name</label>
+      <input defaultValue={inputs.name} name="name" onChange={handleChange} type="text" id="name" className="form-control" required />
     </div>
     <div class="mb-3">
       <label for="location" class="form-label">Location</label>
-      <input type="text" class="form-control" name="location" onSubmit={handleSubmit} id="location" placeholder="Enter your location" required/>
+      <input defaultValue={inputs.location} name="location" onChange={handleChange} type="text" id="location" className="form-control" required />
     </div>
     <div class="mb-3">
       <label for="title" class="form-label">Job Title</label>
-      <input type="text" class="form-control" name="title" onSubmit={handleSubmit} id="title" placeholder="job title" required/>
+      <input defaultValue={inputs.title} name="title" onChange={handleChange} type="text" id="title" className="form-control" required />
     </div>
     <div class="mb-3">
       <label for="vehicle" class="form-label">Vehicle ID</label>
@@ -80,8 +80,8 @@ function Staff() {
       <textarea class="form-control" name="details" onSubmit={handleSubmit} id="details" rows="3" placeholder="Enter work details" required></textarea>
     </div>
     <div class="mb-3">
-      <label for="contactnumber" class="form-label">Contact Number</label>
-      <input type="tel" class="form-control" name="contactnumber" onSubmit={handleSubmit} id="contactnumber" placeholder="Enter your contact number" required/>
+      <label for="contact_number" class="form-label">Contact Number</label>
+      <input type="tel" class="form-control" name="contact_number" onSubmit={handleSubmit} id="contact_number" placeholder="Enter your contact number" required/>
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Email</label>
