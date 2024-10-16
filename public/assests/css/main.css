@@ -553,8 +553,9 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
   position: relative;
+  margin-top: 404px;
 }
 
 .footer .footer-top {

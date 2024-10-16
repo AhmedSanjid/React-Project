@@ -1,7 +1,56 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AdminLayout from '../../layouts/AdminLayout';
+import { useNavigate, Link } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import axios from 'axios';
 
-function Track() {
+function Insurance() {
+  const [inputs, setInputs] = useState({ id: '', name: '', company_name: '', product_name: '', weight: '', destination: '', bank_name: '', cargo_serial_number: '', claim_period: ''});
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  function getDatas() {
+      axios.get(`${process.env.REACT_APP_API_URL}/insurance/${id}`).then(function (response) {
+          setInputs(response.data.data);
+      });
+  }
+
+  useEffect(() => {
+      if (id) {
+          getDatas();
+      }
+  }, []);
+
+  const handleChange = (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      setInputs(values => ({ ...values, [name]: value }));
+  }
+
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+      console.log(inputs)
+
+      try {
+          let apiurl = '';
+          if (inputs.id != '') {
+              apiurl =`/insurance/edit/${inputs.id}`;
+          } else {
+              apiurl =`/insurance/create`;
+          }
+
+          let response = await axios({
+              method: 'post',
+              responsiveType: 'json',
+              url: `${process.env.REACT_APP_API_URL}${apiurl}`,
+              data: inputs
+          });
+          navigate('/insurance')
+      }
+      catch (e) {
+          console.log(e);
+        }
+      }
 
   return (
     <AdminLayout>
@@ -58,90 +107,54 @@ function Track() {
       <h2 class="text-center mb-4">File an Insurance Claim</h2>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form>
+          <form onSubmit={handleSubmit}>
             
             <div class="mb-3">
               <label for="name" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name"/>
+              <input defaultValue={inputs.name} name="name" onChange={handleChange} type="text" id="name" className="form-control" required />
             </div>
 
             
             <div class="mb-3">
               <label for="company" class="form-label">Company Name</label>
-              <input type="text" class="form-control" id="company" placeholder="Enter your company name"/>
+              <input defaultValue={inputs.company_name} name="company_name" onChange={handleChange} type="text" id="company_name" className="form-control" required />
             </div>
 
             
             <div class="mb-3">
               <label for="product" class="form-label">Product Name</label>
-              <input type="text" class="form-control" id="product" placeholder="Enter the product name"/>
+              <input defaultValue={inputs.product_name} name="product_name" onChange={handleChange} type="text" id="product_name" className="form-control" required />
             </div>
 
             
             <div class="mb-3">
               <label for="weight" class="form-label">Weight (kg)</label>
-              <input type="number" class="form-control" id="weight" placeholder="Enter the weight in kilograms"/>
+              <input defaultValue={inputs.weight} name="weight" onChange={handleChange} type="text" id="weight" className="form-control" required />
             </div>
 
             
-            <div class="mb-3">
-              <label for="country" class="form-label">Country Name</label>
-              <input type="text" class="form-control" id="country" placeholder="Enter the country name"/>
-            </div>
-
             
             <div class="mb-3">
               <label for="destination" class="form-label">Destination</label>
-              <input type="text" class="form-control" id="destination" placeholder="Enter the destination"/>
+              <input defaultValue={inputs.destination} name="destination" onChange={handleChange} type="text" id="destination" className="form-control" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="country" class="form-label">bank_name</label>
+              <input defaultValue={inputs.bank_name} name="bank_name" onChange={handleChange} type="text" id="bank_name" className="form-control" required />
             </div>
 
             
             <div class="mb-3">
-              <label for="productDetails" class="form-label">Product Details</label>
-              <textarea class="form-control" id="productDetails" rows="3" placeholder="Provide detailed information about the product"></textarea>
+              <label for="product" class="form-label">cargo_serial_number</label>
+              <input defaultValue={inputs.cargo_serial_number} name="cargo_serial_number" onChange={handleChange} type="text" id="cargo_serial_number" className="form-control" required/>
             </div>
 
-            
             <div class="mb-3">
-              <label for="incident" class="form-label">Incident Details</label>
-              <textarea class="form-control" id="incident" rows="3" placeholder="Describe the incident"></textarea>
+              <label for="product" class="form-label">claim_period</label>
+              <input defaultValue={inputs.claim_period} name="claim_period" onChange={handleChange} type="text" id="claim_period" className="form-control" required/>
             </div>
-
             
-            <div class="mb-3">
-              <label for="claim" class="form-label">Claim Description</label>
-              <textarea class="form-control" id="claim" rows="3" placeholder="Describe the claim"></textarea>
-            </div>
-
-            
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email"/>
-            </div>
-
-            
-            <div class="mb-3">
-              <label for="bank" class="form-label">Bank Name</label>
-              <input type="text" class="form-control" id="bank" placeholder="Enter your bank name"/>
-            </div>
-
-            
-            <div class="mb-3">
-              <label for="reference" class="form-label">Reference Name</label>
-              <input type="text" class="form-control" id="reference" placeholder="Enter reference name"/>
-            </div>
-
-            
-            <div class="mb-3">
-              <label for="cargoSerial" class="form-label">Cargo Serial Number</label>
-              <input type="text" class="form-control" id="cargoSerial" placeholder="Enter cargo serial number"/>
-            </div>
-
-            
-            <div class="mb-3">
-              <label for="claimPeriod" class="form-label">Claim Period</label>
-              <input type="datetime-local" class="form-control" id="claimPeriod"/>
-            </div>
 
             
             <div class="d-grid">
@@ -156,4 +169,4 @@ function Track() {
   );
 }
 
-export default Track;
+export default Insurance
