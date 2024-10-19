@@ -23,7 +23,7 @@ const [serialNumber, setSerialNumber] = useState('');
      updateMap(container.lat, container.lng);
     } else {
      setContainerInfo(null);
-  setMapUrl(''); // Clear the map if no data is found
+  setMapUrl('');
     }
   };
 
