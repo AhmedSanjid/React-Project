@@ -128,7 +128,7 @@ function Insurance() {
 
             
             <div class="mb-3">
-              <label for="weight" class="form-label">Weight (kg)</label>
+              <label for="weight" class="form-label">Weight</label>
               <input defaultValue={inputs.weight} name="weight" onChange={handleChange} type="text" id="weight" className="form-control" required />
             </div>
 
