@@ -29,7 +29,7 @@ const isLinkActive = (path) => {
   <div className="carousel-item active">
     <img src="https://geodis.com/se/sites/default/files/styles/w1000xh500/public/2022-02/air-ocean_blog.jpg.webp?itok=O03kgRjE" alt=""/>
     <div className="carousel-container">
-      <h2>Welcome to Diadem</h2>
+      <h2>Welcome to ThiKana</h2>
       <p>"And O my people, give full measure and weight in justice and do not deprive the people of their due and do not commit abuse on the earth, spreading corruption" Surah:Hud-85 </p>
       <a href="#featured-services" className="btn-get-started">Get Started</a>
     </div>
@@ -59,7 +59,7 @@ const isLinkActive = (path) => {
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-bounding-box-circles icon"></i></div>
         <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Login")}`}>
-                  <Link to="/Login" className="sidebar-link">Connect to Diadem</Link></h4>
+                  <Link to="/Login" className="sidebar-link">Connect to ThiKana</Link></h4>
         <p>Receive emissions reporting and optimisation insights across all carriers and modes.</p>
       </div>
     </div>{/* End Service Item */}
@@ -277,6 +277,7 @@ const isLinkActive = (path) => {
   </div>
 
 </section>{/* /Call To Action Section */}
+
 
 {/* Portfolio Section */}
 <section id="portfolio" className="portfolio section">

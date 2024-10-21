@@ -140,18 +140,18 @@ function Insurance() {
             </div>
 
             <div class="mb-3">
-              <label for="country" class="form-label">bank_name</label>
+              <label for="country" class="form-label">Bank Name</label>
               <input defaultValue={inputs.bank_name} name="bank_name" onChange={handleChange} type="text" id="bank_name" className="form-control" required />
             </div>
 
             
             <div class="mb-3">
-              <label for="product" class="form-label">cargo_serial_number</label>
+              <label for="product" class="form-label">Cargo Serial Number</label>
               <input defaultValue={inputs.cargo_serial_number} name="cargo_serial_number" onChange={handleChange} type="text" id="cargo_serial_number" className="form-control" required/>
             </div>
 
             <div class="mb-3">
-              <label for="product" class="form-label">claim_period</label>
+              <label for="product" class="form-label">Claim Period</label>
               <input defaultValue={inputs.claim_period} name="claim_period" onChange={handleChange} type="text" id="claim_period" className="form-control" required/>
             </div>
             

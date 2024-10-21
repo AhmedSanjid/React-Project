@@ -127,7 +127,32 @@ function Sailingfreight() {
                     <input type="number" class="form-control" id="tax" placeholder="Enter tax amount"/>
                 </div>
             </div>
-
+            <fieldset class="border p-4 mb-4">
+        <legend class="w-auto px-2">Special Handling Requirements</legend>
+        <div class="form-check form-switch mb-3">
+          <input class="form-check-input" type="checkbox" id="hazardousMaterials"/>
+          <label class="form-check-label" for="hazardousMaterials">Hazardous Materials</label>
+        </div>
+        <div class="form-check form-switch mb-3">
+          <input class="form-check-input" type="checkbox" id="temperatureControlled"/>
+          <label class="form-check-label" for="temperatureControlled">Temperature Controlled</label>
+        </div>
+        <div class="form-check form-switch mb-3">
+          <input class="form-check-input" type="checkbox" id="fragile"/>
+          <label class="form-check-label" for="fragile">Fragile</label>
+        </div>
+      </fieldset>
+      <fieldset class="border p-4 mb-4">
+        <legend class="w-auto px-2">Payment Information</legend>
+        <div class="mb-3">
+          <label for="paymentMethod" class="form-label">Payment Method</label>
+          <select id="paymentMethod" class="form-select" required>
+            <option value="">Select payment method</option>
+            <option value="creditCard">Credit Card</option>
+            <option value="bankTransfer">Bank Transfer</option>
+          </select>
+        </div>
+      </fieldset>
             
             <div class="row">
                 <div class="col-md-6">
