@@ -52,7 +52,7 @@ const isLinkActive = (path) => {
             <li><a href="#services">Logistics Solutions</a></li>
             <li><a href="#portfolio">Services</a></li>
             <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/freights")}`}>
-                  <Link to="/freights" className="sidebar-link">Order Your Freight</Link>
+                  <Link to="/freights" className="sidebar-link">Order Here</Link>
               {/* <ul>
                   <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Highwayfreight")}`}>
                   <Link to="/Highwayfreight" className="sidebar-link">Highway Freight</Link></li>

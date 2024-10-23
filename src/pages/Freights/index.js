@@ -119,18 +119,16 @@ function Freight() {
           </div>
         </div>
       </fieldset>
-
-      
       <fieldset class="border p-4 mb-4">
         <legend class="w-auto px-2">Pickup and Delivery Information</legend>
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="pickup_location" class="form-label">Pickup Location</label>
             <input defaultValue={inputs.pickup_location} name="pickup_location" onChange={handleChange} type="text" id="pickup_location" className="form-control" required />
-            </div>
+          </div>
             <div class="col-md-6">
-            <label for="total_qty" class="form-label">Total Quantity</label>
-            <input defaultValue={inputs.total_qty} name="total_qty" onChange={handleChange} type="text" id="total_qty" className="form-control" required />
+              <label for="total_qty" class="form-label">Total Quantity</label>
+              <input defaultValue={inputs.total_qty} name="total_qty" onChange={handleChange} type="text" id="total_qty" className="form-control" required />
             </div>
           </div>
           <div class="row mb-3">
