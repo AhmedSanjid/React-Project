@@ -27,6 +27,7 @@ import Signup from './pages/Signup';
 import Forget from './pages/Forget';
 import Staff from './pages/Staff';
 import Vendors from './pages/Vendors';
+import Freights from './pages/Freights';
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
           <Route path="/Forget" element={<Forget />} />
           <Route path="/Staff" element={<Staff />} />
           <Route path="/Vendors" element={<Vendors />} />
+          <Route path="/Freights" element={<Freights />} />
         </Routes>
       </BrowserRouter>
 

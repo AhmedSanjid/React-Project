@@ -51,17 +51,18 @@ const isLinkActive = (path) => {
             <li><a href="#about">About</a></li>
             <li><a href="#services">Logistics Solutions</a></li>
             <li><a href="#portfolio">Services</a></li>
-            <li className="dropdown"><a href="index.html"><span>Book Your Freight</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Highwayfreight")}`}>
+            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/freights")}`}>
+                  <Link to="/freights" className="sidebar-link">Order Your Freight</Link>
+              {/* <ul>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Highwayfreight")}`}>
                   <Link to="/Highwayfreight" className="sidebar-link">Highway Freight</Link></li>
-                <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Sailingfreight")}`}>
+                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Sailingfreight")}`}>
                   <Link to="/Sailingfreight" className="sidebar-link"> Sailing Freight</Link></li>
                   <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/airfreight")}`}>
                   <Link to="/airfreight" className="sidebar-link">Air Freight</Link></li>
                   <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Warehouse")}`}>
                   <Link to="/Warehouse" className="sidebar-link">Warehouse</Link></li>
-              </ul>
+              </ul> */}
             </li>
             <li><a href="#contact">Box</a></li>
           </ul>
