@@ -175,28 +175,6 @@ function Freight() {
         </div>
       </fieldset>
 
-      
-      <fieldset class="border p-4 mb-4">
-        <legend class="w-auto px-2">Customs and Insurance</legend>
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" id="exportDocs"/>
-          <label class="form-check-label" for="exportDocs">Export Documentation Required</label>
-        </div>
-        <div class="mb-3">
-          <label for="hsCode" class="form-label">HS Code (optional)</label>
-          <input type="text" class="form-control" id="hsCode" placeholder="Enter HS Code"/>
-        </div>
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" id="insuranceRequired"/>
-          <label class="form-check-label" for="insuranceRequired">Insurance Required</label>
-        </div>
-        <div class="mb-3">
-          <label for="insuranceValue" class="form-label">Insurance Value (if required)</label>
-          <input type="number" class="form-control" id="insuranceValue" placeholder="Enter insurance value"/>
-        </div>
-      </fieldset>
-
-      
       <fieldset class="border p-4 mb-4">
         <legend class="w-auto px-2">Payment Information</legend>
         <div class="mb-3">
