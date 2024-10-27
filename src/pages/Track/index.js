@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../layouts/AdminLayout';
+import { useRef } from 'react';
+import { useEffect } from 'react';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
 function Track() {
   const [serialNumber, setSerialNumber] = useState('');
@@ -8,46 +12,84 @@ function Track() {
 
   const containerData = [
     {
-      id: "ABC123",
-      location: "Port of Los Angeles",
-      size: "40ft",
-      capacity: "33.4tn",
+      id: 'ABC123',
+      location: 'Port of Los Angeles',
+      size: '40ft',
+      capacity: '33.4tn',
       lat: 33.7366,
       lng: -118.2923,
       arrivalHistory: [
-        { port: "Port of Chittagong", date: "2024-10-01 10:00" },
-        { port: "Port of Busan", date: "2024-10-07 15:30" },
-        { port: "Port of Los Angeles", date: "2024-10-15 12:00" },
+        { port: 'Port of Chittagong', date: '2024-10-01 10:00' },
+        { port: 'Port of Busan', date: '2024-10-07 15:30' },
+        <button onclick="showDetails()">Port of Los Angeles - 2024-10-15 12:00</button>
       ],
     },
     {
-      id: "DEF456",
-      location: "Port of Chittagong",
-      size: "40ft",
-      capacity: "33.4tn",
+      id: 'DEF456',
+      location: 'Port of Chittagong',
+      size: '40ft',
+      capacity: '33.4tn',
       lat: 22.3091,
       lng: 91.8018,
       arrivalHistory: [
-        { port: "Port of Singapur", date: "2024-09-23 10:00" },
-        { port: "Port of Banda Aceh", date: "2024-09-29 15:30" },
-        { port: "Port of Chittagong", date: "2024-10-03 12:00" },
+        { port: 'Port of Singapur', date: '2024-09-23 10:00' },
+        { port: 'Port of Banda Aceh', date: '2024-09-29 15:30' },
+        { port: 'Port of Chittagong', date: '2024-10-03 12:00' },
       ],
     },
     {
-      id: "GHI789",
-      location: "Port of Chicago",
-      size: "40ft",
-      capacity: "33.4tn",
+      id: 'GHI789',
+      location: 'Port of Chicago',
+      size: '40ft',
+      capacity: '33.4tn',
       lat: 41.7286,
       lng: 87.5355,
       arrivalHistory: [
-        { port: "Port of Toronto", date: "2024-10-11 10:00" },
-        { port: "Port of Owendo", date: "2024-10-15 15:30" },
-        { port: "Port of Chicago", date: "2024-10-21 12:00" },
+        { port: 'Port of Toronto', date: '2024-10-11 10:00' },
+        { port: 'Port of Owendo', date: '2024-10-15 15:30' },
+        { port: 'Port of Chicago', date: '2024-10-21 12:00' },
+        
       ],
     },
   ];
-
+  const MapComponent = ({ container }) => {
+    const mapRef = useRef(null);
+  
+    useEffect(() => {
+      if (!mapRef.current) {
+        const map = L.map(`map-${container.id}`).setView([container.lat, container.lng], 10);
+  
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+        }).addTo(map);
+  
+        const marker = L.marker([container.lat, container.lng]).addTo(map);
+  
+        marker.bindPopup(`
+          <strong>ID:</strong> ${container.id}<br />
+          <strong>Location:</strong> ${container.location}<br />
+          <strong>Size:</strong> ${container.size}<br />
+          <strong>Capacity:</strong> ${container.capacity}
+        `);
+        
+        mapRef.current = map; // Store the map reference
+      }
+    }, [container]);
+  
+    return <div id={`map-${container.id}`} style={{ height: '300px', width: '100%', marginBottom: '20px' }} />;
+  };
+  
+  // Main Component
+  const App = () => {
+    return (
+      <div>
+        <h1>Container Locations</h1>
+        {containerData.map((container) => (
+          <MapComponent key={container.id} container={container} />
+        ))}
+      </div>
+    );
+  };
   const trackContainer = () => {
     const upperCaseSerialNumber = serialNumber.toUpperCase();
     const container = containerData.find(c => c.id === upperCaseSerialNumber);
@@ -67,14 +109,8 @@ function Track() {
   };
 
   return (
-    <AdminLayout>
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
-          <a className="navbar-brand" href="#">Container Tracking System</a>
-        </div>
-      </nav>
 
+    <AdminLayout>
       <section id="search-form" className="py-4 bg-light">
         <div className="container">
           <h2 className="text-center mb-4">Track Your Container</h2>
