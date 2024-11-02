@@ -21,7 +21,7 @@ function Track() {
       arrivalHistory: [
         { port: 'Port of Chittagong', date: '2024-10-01 10:00' },
         { port: 'Port of Busan', date: '2024-10-07 15:30' },
-        <button onclick="showDetails()">Port of Los Angeles - 2024-10-15 12:00</button>
+        { port: 'Port of Los Angeles', date: '2024-10-26 12:00'}
       ],
     },
     {
