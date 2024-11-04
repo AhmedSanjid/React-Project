@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 function Freight() {
-  const [inputs, setInputs] = useState({ id: '', company_name: '',customer_id: '', total_amount: '', vat: '', payment_method: '', shipment_type: '', pickup_time: '', delivery_time: '', total_qty: '',pickup_location: '',delivery_location: '', transport_type_id: ''});
+  const [inputs, setInputs] = useState({ id: '', company_name: '', customer_id: '', total_amount: '', vat: '', payment_method: '', shipment_type: '', pickup_time: '', delivery_time: '', total_qty: '',pickup_location: '',delivery_location: '', transport_type_id: ''});
   const [checkReadonly, setcheckReadonly] = useState(null);
   const navigate = useNavigate();
   const { id } = useParams();
@@ -263,7 +263,7 @@ function Freight() {
 
 
 
-          <fieldset className="border p-4 mb-4">
+          {/* <fieldset className="border p-4 mb-4">
         <legend className="w-auto px-2">Payment Information</legend>
         
         <div className="row mb-3">
@@ -293,7 +293,7 @@ function Freight() {
                 <input defaultValue={inputs.total_amount} name="total_amount" onChange={handleChange} type="text" id="total_amount" className="form-control" required />
             </div>
         </div>
-    </fieldset>
+    </fieldset> */}
           
           <fieldset class="border p-4 mb-4">
             <legend class="w-auto px-2">Additional Notes and Agreement</legend>
