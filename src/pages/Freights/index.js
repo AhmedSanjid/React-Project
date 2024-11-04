@@ -33,12 +33,8 @@ function Freight() {
     console.log(inputs)
 
     try {
-      let apiurl = '';
-      if (inputs.id != '') {
-        apiurl =`/freights/edit/${inputs.id}`;
-      } else {
-        apiurl =`/freights/create`;
-      }
+      let apiurl = `/freights/create`;
+      
       let response = await axios({
           method: 'post',
           responsiveType: 'json',
@@ -320,5 +316,7 @@ function Freight() {
     </AdminLayout>
   )
 }
+
+
 
 export default Freight
