@@ -1,30 +1,31 @@
-import React from 'react';
-import AdminLayout from '../../layouts/AdminLayout';
-import { useLocation, Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import AuthLayout from '../../layouts/AuthLayout';
+import { Link, useNavigate, Navigate } from 'react-router-dom';
+import { login } from '../../Api/AllApi';
 
-function Login() {
-  const activeMenu = (e) => {
-    document.querySelectorAll('.submenu').forEach(
-        function (e) {
-            e.classList.remove('active');
-        }
-    )
-    const childElement = e.target.parentElement.querySelector('.submenu');
-    if (childElement && childElement.classList.contains('submenu')) {
-        childElement.classList.add('active');
-    }
-}
-
-const location = useLocation();
-const isLinkActive = (path) => {
-    return location.pathname == path ? 'active':"";
-  }
+function Clogin() {
+	const navigate = useNavigate();
+	const [inputs, setInputs] = useState([]);
+	const handleChange = (event) => {
+		const name = event.target.name;
+		const value = event.target.value;
+		setInputs(values => ({ ...values, [name]: value }))
+	}
+	const handleSubmit = async (event) => {
+		event.preventDefault();
+		let check = await login(inputs);
+		if (check) {
+			window.location =process.env.REACT_APP_BASE_URL
+		} else {
+			alert("Sorry password or email address is wrong!");
+		}
+	}
   return (
-    <AdminLayout>
+    <AuthLayout>
     <div class="container mt-5">
         
         <h1 class="text-center mb-4">Break The Lock!</h1>
-
+        <form onSubmit={handleSubmit}>
       
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -48,19 +49,19 @@ const isLinkActive = (path) => {
 
                     
                     <div class="text-center">
-                    <p onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Forget")}`}>
-                    <Link to="/Forget" className="sidebar-link">Need any support?</Link></p>
+                    
+                    <Link to="/forget">Need Any Support</Link>
                     </div><br></br>
                     <div class="text-center">
-                    <p onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Signup")}`}> haven't any pass?
-                    <Link to="/Signup" className="sidebar-link">Press the door!</Link></p>
+                    <Link to="/signup">haven't any pass?</Link>
+                    <Link to="/signup">press the door!</Link>
                   </div>
                 </form>
             </div>
         </div>
-    </div>
-
-    </AdminLayout>
+        </form>
+        </div>
+    </AuthLayout>
   )
 }
-export default Login
+export default Clogin

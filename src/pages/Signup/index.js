@@ -1,9 +1,26 @@
-import React from 'react';
-import AdminLayout from '../../layouts/AdminLayout';
+import React, { useState } from 'react';
+import AuthLayout from '../../layouts/AuthLayout';
+import { Link, useNavigate } from 'react-router-dom';
+import { register } from '../../Api/AllApi';
 
 function Signup() {
+    const [inputs, setInputs] = useState([]);
+    const navigate = useNavigate();
+
+
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({ ...values, [name]: value }));
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await register(inputs);
+        navigate('/Clogin')
+    }
   return (
-    <AdminLayout>
+    <AuthLayout>
     <div class="container mt-5">
         
         <h1 class="text-center mb-4">Create Your Passkey!</h1>
@@ -11,29 +28,29 @@ function Signup() {
         
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form>
+            <form onSubmit={handleSubmit}>
                     
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter your username"/>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your username"onChange={handleChange}/>
                     </div>
 
                     
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email"/>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email"onChange={handleChange}/>
                     </div>
 
                     
                     <div class="mb-3">
                         <label for="passkey" class="form-label">Passkey</label>
-                        <input type="password" class="form-control" id="passkey" placeholder="Enter your passkey"/>
+                        <input type="password" class="form-control" id="passkey" placeholder="Enter your passkey"onChange={handleChange}/>
                     </div>
 
                     
                     <div class="mb-3">
                         <label for="confirmPasskey" class="form-label">Confirm Passkey</label>
-                        <input type="password" class="form-control" id="confirmPasskey" placeholder="Confirm your passkey"/>
+                        <input type="password" class="form-control" id="confirmPasskey" placeholder="Confirm your passkey"onChange={handleChange}/>
                     </div>
 
                     
@@ -41,14 +58,14 @@ function Signup() {
                         <button type="submit" class="btn btn-info w-100">Sign Up</button>
                     </div>
                     <div class="text-center">
-                      <p>Already have Passkey? <a href="http://127.0.0.1:3000/Login#">Break here!</a></p>
+                      <p>Already have Passkey? <a href="/">Break here!</a></p>
                   </div>
                 </form>
             </div>
         </div>
     </div>
 
-    </AdminLayout>
+    </AuthLayout>
   )
 }
 export default Signup

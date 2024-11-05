@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AdminLayout from '../../layouts/AdminLayout';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 
@@ -59,12 +59,12 @@ function Freight() {
       setInputs(values => ({ ...values, ['customer_id']: '' }));
 
       let response = await axios({
-                                method: 'post',
-                                responsiveType: 'json',
-                                url: `${process.env.REACT_APP_API_URL}${apiurl}`,
-                                data: inputs
-                              });
-      
+        method: 'post',
+        responsiveType: 'json',
+        url: `${process.env.REACT_APP_API_URL}${apiurl}`,
+        data: inputs
+      });
+
       if(response.data.data){
         setInputs(response.data.data);
         setcheckReadonly(true);
@@ -103,6 +103,7 @@ function Freight() {
                 <label for="company_name" class="form-label">Company Name</label>
                 <input defaultValue={inputs.company_name} readOnly={checkReadonly} name="company_name" onChange={handleChange} type="text" id="company_name" className="form-control" required />
               </div>
+
               <div class="col-md-6">
                 <label for="companyAddress" class="form-label">Company Address</label>
                 <input type="text" defaultValue={inputs.address} readOnly={checkReadonly} name="address" onChange={handleChange} class="form-control" id="companyAddress" placeholder="Enter company address" required/>
@@ -110,7 +111,6 @@ function Freight() {
             </div>
             
           </fieldset>
-
 
           <fieldset className="border p-4 mb-4">
         <legend className="w-auto px-2">Shipment Details</legend>
@@ -125,6 +125,7 @@ function Freight() {
                     <option value="road">Highway Freight</option>
                 </select>
             </div>
+
             <div className="col-md-6">
                 <label htmlFor="item" className="form-label">Items</label>
                 <input defaultValue={inputs.item} name="item" onChange={handleChange} type="text" id="item" className="form-control"  placeholder="Enter your items" required />
@@ -136,6 +137,7 @@ function Freight() {
                 <label htmlFor="cargoDescription" className="form-label">Cargo Description</label>
                 <input type="text" className="form-control" id="cargoDescription" placeholder="Enter cargo description" required />
             </div>
+
             <div className="col-md-6">
                 <label htmlFor="containerUnits" className="form-label">Number of Containers/Units</label>
                 <input type="number" className="form-control" id="containerUnits" placeholder="Enter number of containers/units" required />
@@ -154,8 +156,6 @@ function Freight() {
             </div>
         </div>
       </fieldset>
-
-
 
           <fieldset class="border p-4 mb-4">
             <legend class="w-auto px-2">Pickup and Delivery Information</legend>

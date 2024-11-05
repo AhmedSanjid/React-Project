@@ -58,8 +58,8 @@ const isLinkActive = (path) => {
     <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
       <div className="service-item position-relative">
         <div className="icon"><i className="bi bi-bounding-box-circles icon"></i></div>
-        <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Login")}`}>
-                  <Link to="/Login" className="sidebar-link">Connect to ThiKana</Link></h4>
+        <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Clogin")}`}>
+                  <Link to="/Clogin" className="sidebar-link">Connect to ThiKana</Link></h4>
         <p>Receive emissions reporting and optimisation insights across all carriers and modes.</p>
       </div>
     </div>{/* End Service Item */}
