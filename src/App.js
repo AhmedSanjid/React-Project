@@ -22,13 +22,12 @@ import Airfreight from './pages/Airfreight';
 import Sailingfreight from './pages/Sailingfreight';
 import Highwayfreight from './pages/Highwayfreight';
 import Warehouse from './pages/Warehouse';
-import Clogin from './pages/Clogin';
 import Signup from './pages/Signup';
 import Forget from './pages/Forget';
 import Staff from './pages/Staff';
 import Vendors from './pages/Vendors';
 import Freights from './pages/Freights';
-
+import Clogin from './pages/Clogin';
 function App() {
   return (
 

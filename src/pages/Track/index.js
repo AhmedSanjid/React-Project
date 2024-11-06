@@ -4,6 +4,8 @@ import { useRef } from 'react';
 import { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function Track() {
   const [serialNumber, setSerialNumber] = useState('');
@@ -72,16 +74,58 @@ function Track() {
           <strong>Capacity:</strong> ${container.capacity}
         `);
         
-        mapRef.current = map; // Store the map reference
+        mapRef.current = map;
       }
     }, [container]);
   
     return <div id={`map-${container.id}`} style={{ height: '300px', width: '100%', marginBottom: '20px' }} />;
   };
+  function MyVerticallyCenteredModal(props) {
+    const [modalShow, setModalShow] = React.useState(false);
+
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Modal heading
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>Centered Modal</h4>
+          <p>
+          id: 'GHI789',
+      location: 'Port of Chicago',
+      size: '40ft',
+      capacity: '33.4tn',
+      lat: 41.7286,
+      lng: 87.5355,
+      arrivalHistory: 
+         port: 'Port of Toronto', date: '2024-10-11 10:00
+        port: 'Port of Owendo', date: '2024-10-15 15:30
+        port: 'Port of Chicago', date: '2024-10-21 12:00
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+        <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="success" onClick={handleClose}>
+            Okay
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
   
   // Main Component
   const App = () => {
     return (
+      
       <div>
         <h1>Container Locations</h1>
         {containerData.map((container) => (
@@ -108,9 +152,25 @@ function Track() {
     setMapUrl(url);
   };
 
+  const [modalShow, setModalShow] = useState(false);
+
+  const handleShow = () => setModalShow(true);
+  const handleClose = () => setModalShow(false);
+
   return (
 
     <AdminLayout>
+       < div className=''>
+      <Button variant="success d-block mx-auto" onClick={() => setModalShow(true)}>
+        Informations
+      </Button>
+
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </div>
+      
       <section id="search-form" className="py-4 bg-light">
         <div className="container">
           <h2 className="text-center mb-4">Track Your Container</h2>
@@ -161,7 +221,7 @@ function Track() {
             </div>
           )}
 
-          {/* Arrival History Section */}
+        
           {containerInfo && containerInfo.arrivalHistory && (
             <div className="mt-5">
               <h2 className="text-center mb-4">Arrival History</h2>
