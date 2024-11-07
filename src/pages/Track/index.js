@@ -7,6 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+
 function Track() {
   const [serialNumber, setSerialNumber] = useState('');
   const [containerInfo, setContainerInfo] = useState(null);
@@ -56,7 +57,10 @@ function Track() {
   ];
   const MapComponent = ({ container }) => {
     const mapRef = useRef(null);
-  
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow (false);
+    const handleShow = () => setShow (true);
+    // const{} = useParams();
     useEffect(() => {
       if (!mapRef.current) {
         const map = L.map(`map-${container.id}`).setView([container.lat, container.lng], 10);
@@ -85,6 +89,7 @@ function Track() {
 
     return (
       <Modal
+      // <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}
         {...props}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
@@ -92,11 +97,11 @@ function Track() {
         >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
+            Track Status
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Centered Modal</h4>
+      
           <p>
           id: 'GHI789',
       location: 'Port of Chicago',
