@@ -22,8 +22,8 @@ import Airfreight from './pages/Airfreight';
 import Sailingfreight from './pages/Sailingfreight';
 import Highwayfreight from './pages/Highwayfreight';
 import Warehouse from './pages/Warehouse';
-import Clogin from './pages/Clogin';
-import Signup from './pages/Signup';
+import Clogin from './pages/clogin';
+import Signup from './pages/signup';
 import Forget from './pages/Forget';
 import Staff from './pages/Staff';
 import Vendors from './pages/Vendors';
@@ -56,8 +56,8 @@ function App() {
           <Route path="/Sailingfreight" element={<Sailingfreight />} />
           <Route path="/Highwayfreight" element={<Highwayfreight />} />
           <Route path="/Warehouse" element={<Warehouse />} />
-          <Route path="/Clogin" element={<Clogin />} />
-          <Route path="/Signup" element={<Signup />} />
+          <Route path="/clogin" element={<Clogin />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/Forget" element={<Forget />} />
           <Route path="/Staff" element={<Staff />} />
           <Route path="/Vendors" element={<Vendors />} />

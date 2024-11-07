@@ -20,10 +20,10 @@ function Clogin() {
 			alert("Sorry password or email address is wrong!");
 		}
 	}
+
   return (
     <AuthLayout>
     <div class="container mt-5">
-        
         <h1 class="text-center mb-4">Break The Lock!</h1>
         <form onSubmit={handleSubmit}>
       
@@ -33,13 +33,13 @@ function Clogin() {
                     
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="username" class="form-control" id="username" placeholder="Username"/>
+                        <input type="username" class="form-control" id="username" name="name" placeholder="Username" onChange={handleChange}/>
                     </div>
 
                   
                     <div class="mb-3">
                         <label for="passkey" class="form-label">Passkey</label>
-                        <input type="passkey" class="form-control" id="passkey" placeholder="insert your passkey"/>
+                        <input type="passkey" class="form-control" id="passkey" name="password" placeholder="insert your passkey" onChange={handleChange}/>
                     </div>
 
                     
@@ -47,13 +47,13 @@ function Clogin() {
                         <button type="submit" class="btn btn-info w-100">Unlock!</button>
                     </div>
 
-                    
+
                     <div class="text-center">
-                    
                     <Link to="/forget">Need Any Support</Link>
                     </div><br></br>
+                    
                     <div class="text-center">
-                    <Link to="/signup">haven't any pass?</Link>
+                    <p>haven't any pass?</p>
                     <Link to="/signup">press the door!</Link>
                   </div>
                 </form>

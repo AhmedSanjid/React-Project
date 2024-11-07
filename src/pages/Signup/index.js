@@ -17,7 +17,7 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await register(inputs);
-        navigate('/Clogin')
+        navigate('/clogin')
     }
   return (
     <AuthLayout>
@@ -32,25 +32,19 @@ function Signup() {
                     
                     <div class="mb-3">
                         <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter your username"onChange={handleChange}/>
+                        <input type="text" class="form-control" id="username" name="name" placeholder="Enter your username"onChange={handleChange}/>
                     </div>
 
                     
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email"onChange={handleChange}/>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"onChange={handleChange}/>
                     </div>
 
                     
                     <div class="mb-3">
                         <label for="passkey" class="form-label">Passkey</label>
-                        <input type="password" class="form-control" id="passkey" placeholder="Enter your passkey"onChange={handleChange}/>
-                    </div>
-
-                    
-                    <div class="mb-3">
-                        <label for="confirmPasskey" class="form-label">Confirm Passkey</label>
-                        <input type="password" class="form-control" id="confirmPasskey" placeholder="Confirm your passkey"onChange={handleChange}/>
+                        <input type="password" class="form-control" id="passkey" name="password" placeholder="Enter your passkey"onChange={handleChange}/>
                     </div>
 
                     
@@ -58,7 +52,8 @@ function Signup() {
                         <button type="submit" class="btn btn-info w-100">Sign Up</button>
                     </div>
                     <div class="text-center">
-                      <p>Already have Passkey? <a href="/">Break here!</a></p>
+                    <p>Already have Passkey?</p><Link to="/clogin">Break here!</Link>
+
                   </div>
                 </form>
             </div>
