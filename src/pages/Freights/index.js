@@ -78,7 +78,6 @@ function Freight() {
       <div class="container my-5">
         <h2 class="text-center mb-4">Shipment Order Form</h2>
         <form onSubmit={handleSubmit}>
-
           <fieldset class="border p-4 mb-4">
           <h3>Search your Order</h3>
             <div class="row mb-3">
@@ -92,7 +91,6 @@ function Freight() {
                 <input type="text" class="form-control" name="contact_no" onBlur={checkCustomer} onChange={handleChange} placeholder="Enter phone number" required />
               </div>
             </div>
-
           </fieldset>
 
           <fieldset class="border p-4 mb-4">
@@ -170,20 +168,21 @@ function Freight() {
                 </div>
               </div>
               <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="pickup_time" class="form-label">Pickup Date/Time</label>
-                <input defaultValue={inputs.pickup_time} name="pickup_time" onChange={handleChange} type="datetime-local" id="pickup_time" className="form-control" required />
+                    <div class="col-md-6">
+                        <label for="pickup_time" class="form-label">Pickup Date/Time</label>
+                          <input defaultValue={inputs.pickup_time} name="pickup_time" onChange={handleChange} type="datetime-local" id="pickup_time" className="form-control" required />
+                            </div>
+                              <div class="col-md-6">
+                              <label for="total_qty" class="form-label">Select Transport</label>
+                                <select defaultValue={inputs.transport_type_id} onChange={handleChange} name="transport_type_id" className='form-control'> 
+                                  <option value="">Select One</option>
+                                <option value="creditCard">Air</option>
+                            <option value="bankTransfer">Sailing</option>
+                          <option value="creditCard">Highway</option>
+                      </select>
+                  </div>
               </div>
-              <div class="col-md-6">
-              <label for="total_qty" class="form-label">Select Transport</label>
-              <select defaultValue={inputs.transport_type_id} onChange={handleChange} name="transport_type_id" className='form-control'> 
-                <option value="">Select One</option>
-                <option value="creditCard">Air</option>
-                <option value="bankTransfer">Sailing</option>
-                <option value="creditCard">Highway</option>
-              </select>
-                </div>
-              </div>
+
             <div class="row mb-3">
               <div class="col-md-6">
                 <label for="delivery_location" class="form-label">Delivery Location</label>
@@ -195,105 +194,6 @@ function Freight() {
               </div>
             </div>
           </fieldset>
-
-        {/* <fieldset className="border p-4 mb-4">
-            <legend className="w-auto px-2">Special Handling</legend>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="hazardousMaterials" />
-                <label className="form-check-label" htmlFor="hazardousMaterials">Hazardous Materials</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="temperatureControlled" />
-                <label className="form-check-label" htmlFor="temperatureControlled">Temperature Controlled</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="fragile" />
-                <label className="form-check-label" htmlFor="fragile">Fragile</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="perishable" />
-                <label className="form-check-label" htmlFor="perishable">Perishable</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="flammable" />
-                <label className="form-check-label" htmlFor="flammable">Flammable</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="oversized" />
-                <label className="form-check-label" htmlFor="oversized">Oversized Cargo</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="liveAnimals" />
-                <label className="form-check-label" htmlFor="liveAnimals">Live Animals</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="radioactiveMaterials" />
-                <label className="form-check-label" htmlFor="radioactiveMaterials">Radioactive Materials</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="corrosiveMaterials" />
-                <label className="form-check-label" htmlFor="corrosiveMaterials">Corrosive Materials</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="explosives" />
-                <label className="form-check-label" htmlFor="explosives">Explosives</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="restrictedItems" />
-                <label className="form-check-label" htmlFor="restrictedItems">Restricted Items</label>
-            </div>
-
-            <div className="form-check form-switch mb-3">
-                <input className="form-check-input" type="checkbox" id="medicalSupplies" />
-                <label className="form-check-label" htmlFor="medicalSupplies">Medical Supplies</label>
-            </div>
-
-        </fieldset> */}
-
-
-
-          {/* <fieldset className="border p-4 mb-4">
-        <legend className="w-auto px-2">Payment Information</legend>
-        
-        <div className="row mb-3">
-            <div className="col-md-6">
-                <label htmlFor="payment_method" className="form-label">Payment Method</label>
-                <select defaultValue={inputs.payment_method} onChange={handleChange} name="payment_method" className="form-control">
-                    <option value="">Select payment method</option>
-                    <option value="creditCard">Credit Card</option>
-                    <option value="bankTransfer">Bank Transfer</option>
-                </select>
-            </div>
-        </div>
-        
-        <div className="row mb-3">
-            <div className="col-md-6">
-                <label htmlFor="vat" className="form-label">VAT Percentage</label>
-                <div className="input-group">
-                    <input defaultValue={inputs.vat} name="vat" onChange={handleChange} type="text" id="vat" className="form-control" required />
-                    <span className="input-group-text">%</span>
-                </div>
-            </div>
-        </div>
-        
-        <div className="row mb-3">
-            <div className="col-md-6">
-                <label htmlFor="total_amount" className="form-label">Total Amount</label>
-                <input defaultValue={inputs.total_amount} name="total_amount" onChange={handleChange} type="text" id="total_amount" className="form-control" required />
-            </div>
-        </div>
-    </fieldset> */}
           
           <fieldset class="border p-4 mb-4">
             <legend class="w-auto px-2">Additional Notes and Agreement</legend>
@@ -307,12 +207,12 @@ function Freight() {
             </div>
           </fieldset>
 
-        
           <div class="text-center">
             <button type="submit" class="btn btn-success">Submit Order</button>
           </div>
         </form>
       </div>
+
     </AdminLayout>
   )
 }
