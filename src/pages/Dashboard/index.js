@@ -207,7 +207,8 @@ const isLinkActive = (path) => {
     <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
       <div className="service-item item-cyan position-relative">
         <i className="bi bi-activity icon"></i>
-        <h3><a href="service-details.html" className="read-more stretched-link">Resilience</a></h3>
+        <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Forcast")}`}>
+            <Link to="/Forcast" className="sidebar-link">Risk Assessment</Link></h4>
         <p>Build robust processes and business continuity plans within your supply chain to be able to bounce back from disruptions.</p>
       </div>
     </div>{/* End Service Item */}

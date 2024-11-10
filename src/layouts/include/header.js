@@ -1,6 +1,8 @@
-import React from 'react'
 import { useLocation, Link} from 'react-router-dom';
+import React from 'react';
+
 function Header() {
+  
   const activeMenu = (e) => {
     document.querySelectorAll('.submenu').forEach(
         function (e) {
@@ -18,8 +20,8 @@ const isLinkActive = (path) => {
     return location.pathname == path ? 'active':"";
   }
   return (
+  
     <header id="header" className="header sticky-top">
-
     <div className="topbar d-flex align-items-center accent-background">
       <div className="container d-flex justify-content-center justify-content-md-between">
         <div className="contact-info d-flex align-items-center">
@@ -31,6 +33,7 @@ const isLinkActive = (path) => {
           <a href="index.html" className="facebook"><i className="bi bi-facebook"></i></a>
           <a href="index.html" className="instagram"><i className="bi bi-instagram"></i></a>
           <a href="index.html" className="linkedin"><i className="bi bi-linkedin"></i></a>
+        
         </div>
       </div>
     </div>{/* End Top Bar */}
@@ -53,16 +56,6 @@ const isLinkActive = (path) => {
             <li><a href="#portfolio">Services</a></li>
             <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/freights")}`}>
                   <Link to="/freights" className="sidebar-link">Order Here</Link>
-              {/* <ul>
-                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Highwayfreight")}`}>
-                  <Link to="/Highwayfreight" className="sidebar-link">Highway Freight</Link></li>
-                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Sailingfreight")}`}>
-                  <Link to="/Sailingfreight" className="sidebar-link"> Sailing Freight</Link></li>
-                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/airfreight")}`}>
-                  <Link to="/airfreight" className="sidebar-link">Air Freight</Link></li>
-                  <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Warehouse")}`}>
-                  <Link to="/Warehouse" className="sidebar-link">Warehouse</Link></li>
-              </ul> */}
             </li>
             <li><a href="#contact">Box</a></li>
           </ul>

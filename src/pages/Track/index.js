@@ -4,6 +4,9 @@ import { useRef } from 'react';
 import { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 
 function Track() {
   const [serialNumber, setSerialNumber] = useState('');
@@ -54,7 +57,10 @@ function Track() {
   ];
   const MapComponent = ({ container }) => {
     const mapRef = useRef(null);
-  
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow (false);
+    const handleShow = () => setShow (true);
+    // const{} = useParams();
     useEffect(() => {
       if (!mapRef.current) {
         const map = L.map(`map-${container.id}`).setView([container.lat, container.lng], 10);
@@ -72,16 +78,78 @@ function Track() {
           <strong>Capacity:</strong> ${container.capacity}
         `);
         
-        mapRef.current = map; // Store the map reference
+        mapRef.current = map;
       }
     }, [container]);
   
     return <div id={`map-${container.id}`} style={{ height: '300px', width: '100%', marginBottom: '20px' }} />;
   };
+  function MyVerticallyCenteredModal(props) {
+    const [modalShow, setModalShow] = React.useState(false);
+
+    return (
+      <Modal
+      // <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Track Details
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+    <div class="container mt-5">
+        <form>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" name="location" id="location" placeholder="location"/>
+            </div>
+            <div class="mb-3">
+                <label for="location_time" class="form-label">Receiving Time</label>
+                <input type="text" class="form-control" name="location_time" id="location_time" placeholder="Receving time"/>
+            </div>
+            <div class="mb-3">
+                <label for="recived_by" class="form-label">Receiver's Name</label>
+                <input type="text" class="form-control" id="recived_by" name="recived_by" placeholder="receiver's name"/>
+            </div>
+            <div class="mb-3">
+                <label for="warehouse_id" class="form-label">Warehouse Name</label>
+                <input type="text" class="form-control" id="warehouse_id" name="warehouse_id" placeholder="warehouse name"/>
+            </div>
+            <div class="mb-3">
+                <label for="warehouse_block_id" class="form-label">Warehouse Block</label>
+                <input type="text" class="form-control" id="warehouse_block_id" name="warehouse_block_id" placeholder="Warehouse block"/>
+            </div>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <input type="text" class="form-control" id="status" name="status" placeholder="status"/>
+            </div>
+            <div class="mb-3">
+                <label for="note" class="form-label">Note</label>
+                <textarea class="form-control" id="note" rows="3" placeholder="notes"></textarea>
+            </div>
+        </form>
+    </div>
+        </Modal.Body>
+        <Modal.Footer>
+        <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="success" onClick={handleClose}>
+            Okay
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
   
   // Main Component
   const App = () => {
     return (
+      
       <div>
         <h1>Container Locations</h1>
         {containerData.map((container) => (
@@ -108,9 +176,25 @@ function Track() {
     setMapUrl(url);
   };
 
+  const [modalShow, setModalShow] = useState(false);
+
+  const handleShow = () => setModalShow(true);
+  const handleClose = () => setModalShow(false);
+
   return (
 
     <AdminLayout>
+       < div className=''>
+      <Button variant="success d-block mx-auto" onClick={() => setModalShow(true)}>
+        Informations
+      </Button>
+
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </div>
+      
       <section id="search-form" className="py-4 bg-light">
         <div className="container">
           <h2 className="text-center mb-4">Track Your Container</h2>
@@ -161,7 +245,6 @@ function Track() {
             </div>
           )}
 
-          {/* Arrival History Section */}
           {containerInfo && containerInfo.arrivalHistory && (
             <div className="mt-5">
               <h2 className="text-center mb-4">Arrival History</h2>
@@ -182,7 +265,5 @@ function Track() {
     </AdminLayout>
   );
 }
-
-
 
 export default Track;
