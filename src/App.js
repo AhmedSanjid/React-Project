@@ -29,6 +29,7 @@ import Staff from './pages/Staff';
 import Vendors from './pages/Vendors';
 import Freights from './pages/Freights';
 import Forcast from './pages/Forcast';
+import Calculator from './pages/Calculator';
 function App() {
   return (
 
@@ -63,6 +64,7 @@ function App() {
           <Route path="/Vendors" element={<Vendors />} />
           <Route path="/Freights" element={<Freights />} />
           <Route path="/Forcast" element={<Forcast />} />
+          <Route path="/Calculator" element={<Calculator />} />
         </Routes>
       </BrowserRouter>
 

@@ -60,7 +60,7 @@ function Forcast() {
         };
       
         return (
-        
+          
             <section id="weather-forecast" className="py-4 bg-light">
               <Container>
                 <h2 className="text-center mb-4">Risk Assessment</h2>

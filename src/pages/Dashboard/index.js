@@ -216,7 +216,8 @@ const isLinkActive = (path) => {
     <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
       <div className="service-item item-orange position-relative">
         <i className="bi bi-broadcast icon"></i>
-        <h3><a href="service-details.html" className="read-more stretched-link">Flexibility and agility</a></h3>
+        <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Calculator")}`}>
+        <Link to="/Calculator" className="sidebar-link">Cost Calculator</Link></h4>
         <p>Empowering you with the ability to place inventory according to market demand rather than building buffer inventory.</p>
       </div>
     </div>{/* End Service Item */}
