@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 function Freight() {
-  const [inputs, setInputs] = useState({ id: '', company_name: '', item:'', customer_id: '', payment_method: '', shipment_type: '', pickup_time: '', delivery_time: '', total_qty: '', pickup_location: '', delivery_location: '', transport_type_id: '', email:'', address:'', contact_no:'' });
+  const [inputs, setInputs] = useState({ id: '', email:'', contact_no:'', customer_id: '', address:'',  shipment_type: '', item:'', pickup_location: '', total_qty: '', pickup_time: '', transport_type_id: '', delivery_location: '', delivery_time: ''});
   const [checkReadonly, setcheckReadonly] = useState(null);
   const navigate = useNavigate();
   const { id } = useParams();
@@ -54,18 +54,16 @@ function Freight() {
       let apiurl =`/freights/check_customer`;
 
       setcheckReadonly(null);
-      setInputs(values => ({ ...values, ['company_name']: '' }));
       setInputs(values => ({ ...values, ['customer_id']: '' }));
-      setInputs(values => ({ ...values, ['item']: '' }));
-      setInputs(values => ({ ...values, ['payment_method']: '' }));
-      setInputs(values => ({ ...values, ['shipment_type']: '' }));
-      setInputs(values => ({ ...values, ['pickup_time']: '' }));
-      setInputs(values => ({ ...values, ['delivery_time']: '' }));
-      setInputs(values => ({ ...values, ['total_qty']: '' }));
-      setInputs(values => ({ ...values, ['pickup_location']: '' }));
-      setInputs(values => ({ ...values, ['delivery_location']: '' }));
-      setInputs(values => ({ ...values, ['transport_type_id']: '' }));
       setInputs(values => ({ ...values, ['address']: '' }));
+      setInputs(values => ({ ...values, ['shipment_type']: '' }));
+      setInputs(values => ({ ...values, ['item']: '' }));
+      setInputs(values => ({ ...values, ['pickup_location']: '' }));
+      setInputs(values => ({ ...values, ['total_qty']: '' }));
+      setInputs(values => ({ ...values, ['pickup_time']: '' }));
+      setInputs(values => ({ ...values, ['transport_type_id']: '' }));
+      setInputs(values => ({ ...values, ['delivery_location']: '' }));
+      setInputs(values => ({ ...values, ['delivery_time']: '' }));
 
       let response = await axios({
         method: 'post',
@@ -107,13 +105,13 @@ function Freight() {
             <div class="row mb-3">
               <div class="col-md-6">
                 {inputs.customer_id}
-                <label for="company_name" class="form-label">Company Name</label>
-                <input defaultValue={inputs.company_name} readOnly={checkReadonly} name="company_name" onChange={handleChange} type="text" id="company_name" className="form-control" required />
+                <label for="customer_id" class="form-label">Company Name</label>
+                <input defaultValue={inputs.customer_id} readOnly={checkReadonly} name="customer_id" onChange={handleChange} type="text" id="customer_id" className="form-control" required />
               </div>
 
               <div class="col-md-6">
                 <label for="address" class="form-label">Company Address</label>
-                <input type="text" defaultValue={inputs.address} readOnly={checkReadonly} name="address" onChange={handleChange} class="form-control" id="companyAddress" placeholder="Enter company address" required/>
+                <input type="text" defaultValue={inputs.address} readOnly={checkReadonly} name="address" onChange={handleChange} class="form-control" id="address" placeholder="Enter company address" required/>
               </div>
             </div>
             
@@ -182,7 +180,7 @@ function Freight() {
                           <input defaultValue={inputs.pickup_time} name="pickup_time" onChange={handleChange} type="datetime-local" id="pickup_time" className="form-control" required />
                             </div>
                               <div class="col-md-6">
-                              <label for="total_qty" class="form-label">Select Transport</label>
+                              <label for="transport_type_id" class="form-label">Select Transport</label>
                                 <select defaultValue={inputs.transport_type_id} onChange={handleChange} name="transport_type_id" className='form-control'> 
                                   <option value="">Select One</option>
                                 <option value="creditCard">Air</option>
