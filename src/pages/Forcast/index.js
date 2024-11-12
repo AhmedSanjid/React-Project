@@ -13,7 +13,7 @@ function Forcast() {
         const fetchWeatherData = async () => {
           try {
             // Fetch weather data from OpenWeatherMap API
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=YOUR_API_KEY`);
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=853725461acb4919b0d163044241211`);
             setWeatherData(response.data);
       
             // Mock recommendation logic

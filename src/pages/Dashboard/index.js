@@ -208,7 +208,7 @@ const isLinkActive = (path) => {
       <div className="service-item item-cyan position-relative">
         <i className="bi bi-activity icon"></i>
         <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Forcast")}`}>
-            <Link to="/Forcast" className="sidebar-link">Risk Assessment</Link></h4>
+            <Link to="/Forcast" className="sidebar-link">Environmental Impact Tracker</Link></h4>
         <p>Build robust processes and business continuity plans within your supply chain to be able to bounce back from disruptions.</p>
       </div>
     </div>{/* End Service Item */}
