@@ -9,6 +9,7 @@ import Modal from 'react-bootstrap/Modal';
 
 
 function Track() {
+  const [inputs, setInputs] = useState({ id: '', location:'', location_time:'', customer_id: '', recived_by:'',  warehouse_id: '', warehouse_block_id:'', status: '', note: ''});
   const [serialNumber, setSerialNumber] = useState('');
   const [containerInfo, setContainerInfo] = useState(null);
   const [mapUrl, setMapUrl] = useState('');
@@ -102,7 +103,7 @@ function Track() {
         </Modal.Header>
         <Modal.Body>
     <div class="container mt-5">
-        <form>
+    <form>
             <div class="mb-3">
                 <label for="location" class="form-label">Location</label>
                 <input type="text" class="form-control" name="location" id="location" placeholder="location"/>
@@ -129,7 +130,7 @@ function Track() {
             </div>
             <div class="mb-3">
                 <label for="note" class="form-label">Note</label>
-                <textarea class="form-control" id="note" rows="3" placeholder="notes"></textarea>
+                <textarea class="form-control" id="note" name="note" rows="3" placeholder="notes"></textarea>
             </div>
         </form>
     </div>
