@@ -169,7 +169,7 @@ function Forcast() {
                         <strong>Recommended Container:</strong> {recommendation.container}<br />
                         <strong>Truck Speed:</strong> {recommendation.truckSpeed}<br />
                         <strong>Route Suggestion:</strong> {recommendation.route}<br />
-                        <strong>Report:</strong> {recommendation.report}<br /><br />
+                        
                         {/* Display static weather report */}
                         <strong>Static Weather Report for {location}:</strong> <br />
                         {weatherReports[location] ? (
