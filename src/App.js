@@ -30,6 +30,7 @@ import Vendors from './pages/Vendors';
 import Freights from './pages/Freights';
 import Forcast from './pages/Forcast';
 import Calculator from './pages/Calculator';
+import Alert from './pages/Alert';
 function App() {
   return (
 
@@ -65,6 +66,7 @@ function App() {
           <Route path="/Freights" element={<Freights />} />
           <Route path="/Forcast" element={<Forcast />} />
           <Route path="/Calculator" element={<Calculator />} />
+          <Route path="/Alert" element={<Alert />} />
         </Routes>
       </BrowserRouter>
 

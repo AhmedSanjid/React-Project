@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { Container, Form, Button, Card, Alert } from 'react-bootstrap';
-import { Line } from 'react-chartjs-2';
 import AdminLayout from '../../layouts/AdminLayout';
 
 const calculateDistance = (departureCountry, arrivalCountry) => {
@@ -126,28 +124,40 @@ function Calculator() {
   const [quantity, setQuantity] = useState('');
   const [totalCost, setTotalCost] = useState(null);
   const [perUnitCost, setPerUnitCost] = useState(null);
+  const [secondaryTotalCost, setSecondaryTotalCost] = useState(null);
+  const [secondaryPerUnitCost, setSecondaryPerUnitCost] = useState(null);
   const [distance, setDistance] = useState(null);
+  const [secondaryDistance, setSecondaryDistance] = useState(null);
 
   // Cost calculation logic
   const calculateCost = () => {
     // Mock distance calculation between the two countries
-    const calculatedDistance = calculateDistance(departureCountry, arrivalCountry);
-    setDistance(calculatedDistance);
+    const primaryDistance = calculateDistance(departureCountry, arrivalCountry);
+    const secondaryDistance = primaryDistance * 1.2; // Assume secondary route is 20% longer
 
-    let baseCost = 10; // Assume a base cost
-    const distanceFactor = calculatedDistance * 0.1; // Cost factor based on distance
-    const warehouseFactor = (departureWarehouse.length + arrivalWarehouse.length) * 0.1; // Factor based on warehouse names
-    const containerFactor = containerType === 'Standard' ? 0.1 : 0.01; // Different factor for container type
-    const total = baseCost + (distanceFactor + warehouseFactor) * containerFactor * parseInt(quantity, 10);
+    setDistance(primaryDistance);
+    setSecondaryDistance(secondaryDistance);
 
-    const perUnit = total / parseInt(quantity, 10); // Calculate per-unit cost
+    let baseCost = 5; // Reduced base cost
+    const primaryDistanceFactor = primaryDistance * 0.05; // Reduced distance factor
+    const secondaryDistanceFactor = secondaryDistance * 0.05; // Reduced distance factor
+    const warehouseFactor = (departureWarehouse.length + arrivalWarehouse.length) * 0.05; // Reduced warehouse factor
+    const containerFactor = containerType === 'Standard' ? 0.05 : 0.005; // Reduced container factor
 
-    setTotalCost(total);
-    setPerUnitCost(perUnit);
+    const primaryTotal = baseCost + (primaryDistanceFactor + warehouseFactor) * containerFactor * parseInt(quantity, 10);
+    const secondaryTotal = baseCost + (secondaryDistanceFactor + warehouseFactor) * containerFactor * parseInt(quantity, 10);
+
+    const primaryPerUnit = primaryTotal / parseInt(quantity, 10); // Calculate primary per-unit cost
+    const secondaryPerUnit = secondaryTotal / parseInt(quantity, 10); // Calculate secondary per-unit cost
+
+    setTotalCost(primaryTotal);
+    setPerUnitCost(primaryPerUnit);
+    setSecondaryTotalCost(secondaryTotal);
+    setSecondaryPerUnitCost(secondaryPerUnit);
   };
 
   return (
-    
+    <AdminLayout>
       <Container className="mt-5">
         <h1 className="text-center mb-4">Logistics Cost Calculator</h1>
         <Card>
@@ -277,15 +287,21 @@ function Calculator() {
 
             {totalCost !== null && (
               <Alert variant="info" className="mt-4 text-center">
-                <h4>Total Cost: ${totalCost.toFixed(2)}</h4>
+                <h4>Primary Route Cost:</h4>
+                <h5>Total Cost: ${totalCost.toFixed(2)}</h5>
                 <h5>Per Unit Cost: ${perUnitCost.toFixed(2)}</h5>
                 <h6>Distance between {departureCountry} and {arrivalCountry}: {distance} km</h6>
+
+                <h4 className="mt-4">Secondary Route Cost:</h4>
+                <h5>Total Cost: ${secondaryTotalCost.toFixed(2)}</h5>
+                <h5>Per Unit Cost: ${secondaryPerUnitCost.toFixed(2)}</h5>
+                <h6>Distance between {departureCountry} and {arrivalCountry}: {secondaryDistance} km</h6>
               </Alert>
             )}
           </Card.Body>
         </Card>
       </Container>
-    
+    </AdminLayout>
   );
 }
 
