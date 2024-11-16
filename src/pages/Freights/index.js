@@ -67,17 +67,17 @@ function Freight() {
     try {
       let apiurl =`/freights/check_customer`;
 
-      setcheckReadonly(null);
-      setInputs(values => ({ ...values, ['customer_id']: '' }));
-      setInputs(values => ({ ...values, ['address']: '' }));
-      setInputs(values => ({ ...values, ['shipment_type']: '' }));
-      setInputs(values => ({ ...values, ['item']: '' }));
-      setInputs(values => ({ ...values, ['pickup_location']: '' }));
-      setInputs(values => ({ ...values, ['total_qty']: '' }));
-      setInputs(values => ({ ...values, ['pickup_time']: '' }));
-      setInputs(values => ({ ...values, ['transporttype']: '' }));
-      setInputs(values => ({ ...values, ['delivery_location']: '' }));
-      setInputs(values => ({ ...values, ['delivery_time']: '' }));
+      // setcheckReadonly(null);
+      // setInputs(values => ({ ...values, ['customer_id']: '' }));
+      // setInputs(values => ({ ...values, ['address']: '' }));
+      // setInputs(values => ({ ...values, ['shipment_type']: '' }));
+      // setInputs(values => ({ ...values, ['item']: '' }));
+      // setInputs(values => ({ ...values, ['pickup_location']: '' }));
+      // setInputs(values => ({ ...values, ['total_qty']: '' }));
+      // setInputs(values => ({ ...values, ['pickup_time']: '' }));
+      // setInputs(values => ({ ...values, ['transporttype']: '' }));
+      // setInputs(values => ({ ...values, ['delivery_location']: '' }));
+      // setInputs(values => ({ ...values, ['delivery_time']: '' }));
 
       let response = await axios({
         method: 'post',

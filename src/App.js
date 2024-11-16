@@ -31,6 +31,7 @@ import Freights from './pages/Freights';
 import Forcast from './pages/Forcast';
 import Calculator from './pages/Calculator';
 import Alert from './pages/Alert';
+import History from './pages/History';
 function App() {
   return (
 
@@ -67,6 +68,7 @@ function App() {
           <Route path="/Forcast" element={<Forcast />} />
           <Route path="/Calculator" element={<Calculator />} />
           <Route path="/Alert" element={<Alert />} />
+          <Route path="/History" element={<History />} />
         </Routes>
       </BrowserRouter>
 

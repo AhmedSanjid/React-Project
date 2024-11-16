@@ -234,7 +234,8 @@ const isLinkActive = (path) => {
     <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
       <div className="service-item item-red position-relative">
         <i className="bi bi-bounding-box-circles icon"></i>
-        <h3><a href="service-details.html" className="read-more stretched-link">Reliability</a></h3>
+        <h4 onClick={activeMenu} className={`sidebar-item ${isLinkActive("/History")}`}>
+        <Link to="/History" className="sidebar-link">Order History</Link></h4>
         <p>Reduce frictions within your supply chain with fewer handovers thanks to a reliable partner who ensures cost-efficiency.</p>
       </div>
     </div>{/* End Service Item */}
