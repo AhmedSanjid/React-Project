@@ -6,16 +6,16 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
 function History() {
-  const [inputs, setInputs] = useState({ id: '', company_name: '', email: '', shipment_date: '', cargo_type: '', shipment_country: '', warehouse_name: '', cost: '', shipment_status: '', tracking_number: ''});
-
+  const [inputs, setInputs] = useState({company_name: '', email: ''});
   const [orderHistory, setOrderHistory] = useState([]);
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const { id } = useParams();
 
   const fetchOrderHistory = async () => {
+
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/history/${id}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/history?company_name=${inputs.company_name}&email=${inputs.email}`);
       setOrderHistory(response.data.data);
       setError('');
     } catch (err) {
@@ -56,7 +56,7 @@ function History() {
     console.log(inputs);
 
     try {
-      let apiurl = `/histories/create`;
+      let apiurl = `/history/create`;
 
       let response = await axios({
         method: 'post',
@@ -119,7 +119,7 @@ function History() {
               </Form.Group>
 
               <Button variant="primary" className="w-100" onClick={fetchOrderHistory}>
-                Fetch Order History
+                Check History
               </Button>
             </Form>
 
@@ -149,7 +149,7 @@ function History() {
                       <td>{order.cargo_type}</td>
                       <td>{order.shipment_country}</td>
                       <td>{order.warehouse_name}</td>
-                      <td>${order.cost.toFixed(2)}</td>
+                      <td>${order.cost}</td>
                       <td>{order.shipment_status}</td>
                       <td>{order.tracking_number}</td>
                     </tr>

@@ -32,6 +32,7 @@ import Forcast from './pages/Forcast';
 import Calculator from './pages/Calculator';
 import Alert from './pages/Alert';
 import History from './pages/History';
+import Showhistory from './pages/History/Showhistory';
 function App() {
   return (
 
@@ -69,6 +70,8 @@ function App() {
           <Route path="/Calculator" element={<Calculator />} />
           <Route path="/Alert" element={<Alert />} />
           <Route path="/History" element={<History />} />
+          <Route path={"/History/add"} element={<Showhistory />} />
+          <Route path={"/History/edit/:id"} element={<Showhistory />} />
         </Routes>
       </BrowserRouter>
 
