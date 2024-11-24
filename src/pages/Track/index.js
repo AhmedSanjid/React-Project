@@ -106,31 +106,31 @@ function Track() {
     <form>
             <div class="mb-3">
                 <label for="location" class="form-label">Location</label>
-                <input type="text" class="form-control" name="location" id="location" placeholder="location"/>
+                <input type="text" class="form-control" name="location" id="location" value="USA"/>
             </div>
             <div class="mb-3">
                 <label for="location_time" class="form-label">Receiving Time</label>
-                <input type="text" class="form-control" name="location_time" id="location_time" placeholder="Receving time"/>
+                <input type="text" class="form-control" name="location_time" id="location_time" Value=" 12:05 a.m 12.11.2024"/>
             </div>
             <div class="mb-3">
                 <label for="recived_by" class="form-label">Receiver's Name</label>
-                <input type="text" class="form-control" id="recived_by" name="recived_by" placeholder="receiver's name"/>
+                <input type="text" class="form-control" id="recived_by" name="recived_by" value="Rimon Ahmed"/>
             </div>
             <div class="mb-3">
                 <label for="warehouse_id" class="form-label">Warehouse Name</label>
-                <input type="text" class="form-control" id="warehouse_id" name="warehouse_id" placeholder="warehouse name"/>
+                <input type="text" class="form-control" id="warehouse_id" name="warehouse_id" value="warehouse-205"/>
             </div>
             <div class="mb-3">
                 <label for="warehouse_block_id" class="form-label">Warehouse Block</label>
-                <input type="text" class="form-control" id="warehouse_block_id" name="warehouse_block_id" placeholder="Warehouse block"/>
+                <input type="text" class="form-control" id="warehouse_block_id" name="warehouse_block_id" value="section-5T"/>
             </div>
             <div class="mb-3">
                 <label for="status" class="form-label">Status</label>
-                <input type="text" class="form-control" id="status" name="status" placeholder="status"/>
+                <input type="text" class="form-control" id="status" name="status" value="Recived"/>
             </div>
             <div class="mb-3">
                 <label for="note" class="form-label">Note</label>
-                <textarea class="form-control" id="note" name="note" rows="3" placeholder="notes"></textarea>
+                <textarea class="form-control" id="note" name="note" rows="3" value="2 days delay from Port of Busan"></textarea>
             </div>
         </form>
     </div>
