@@ -14,7 +14,6 @@ function Dashboard() {
         childElement.classList.add('active');
     }
 }
-
 const location = useLocation();
 const isLinkActive = (path) => {
     return location.pathname == path ? 'active':"";

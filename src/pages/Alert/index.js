@@ -30,7 +30,7 @@ function Notification() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(inputs)
-  
+
         try {
             let apiurl = '';
             if (inputs.id != '') {
@@ -63,7 +63,6 @@ function Notification() {
       <input type="text" class="form-control" id="name" name="name" onChange={handleChange} placeholder="Enter your name" required/>
     </div>
 
-    
     <div class="mb-3">
       <label for="contactNumber" class="form-label">Contact Number</label>
       <input type="tel" class="form-control" id="contactNumber" name="contact_no" onChange={handleChange} placeholder="Enter your contact number" required/>
@@ -74,13 +73,11 @@ function Notification() {
         <input type="email" class="form-control" id="email" name="email" onChange={handleChange} placeholder="Enter your email" required/>
     </div>
 
-
     <div class="mb-3">
       <label for="location" class="form-label">Location</label>
       <input type="text" class="form-control" id="location" name="location" onChange={handleChange} placeholder="Enter your location" required/>
     </div>
 
-    
     <div class="mb-3">
       <label for="freightType" class="form-label">Freight Types</label>
       <select class="form-select" id="freightType" name="freight_type" onChange={handleChange} required>
@@ -91,7 +88,6 @@ function Notification() {
       </select>
     </div>
 
-    
     <div class="mb-3">
       <label for="alterType" class="form-label">Alter Types</label>
       <select class="form-select" id="alterType" name="alert_type" onChange={handleChange} required>

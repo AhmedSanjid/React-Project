@@ -171,7 +171,6 @@ function Calculator() {
                   onChange={(e) => setProductName(e.target.value)}
                 />
               </Form.Group>
-
               <Form.Group className="mb-3">
                 <Form.Label>Departure Country</Form.Label>
                 <Form.Control
@@ -180,7 +179,6 @@ function Calculator() {
                   onChange={(e) => setDepartureCountry(e.target.value)}
                 />
               </Form.Group>
-
               <Form.Group className="mb-3">
                 <Form.Label>Departure Warehouse Name</Form.Label>
                 <Form.Control
@@ -189,7 +187,6 @@ function Calculator() {
                   onChange={(e) => setDepartureWarehouse(e.target.value)}
                 />
               </Form.Group>
-
               <Form.Group className="mb-3">
                 <Form.Label>Arrival Country</Form.Label>
                 <Form.Control
@@ -198,7 +195,6 @@ function Calculator() {
                   onChange={(e) => setArrivalCountry(e.target.value)}
                 />
               </Form.Group>
-
               <Form.Group className="mb-3">
                 <Form.Label>Arrival Warehouse Name</Form.Label>
                 <Form.Control
